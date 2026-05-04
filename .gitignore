@@ -42,3 +42,13 @@ next-env.d.ts
 
 # cache
 .cache/
+
+# playwright MCP
+.playwright-mcp/
+
+# screenshots and snapshots
+*.png
+*.jpg
+*.jpeg
+ysl-*.png
+ysl-*.md

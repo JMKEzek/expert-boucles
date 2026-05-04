@@ -35,7 +35,7 @@ export default async function Home() {
       <FullScreenScroll>
         {/* ─── SLIDE 1: HERO — With parallax effect ─── */}
         <HeroSlide
-          backgroundImage="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1920&h=1080&fit=crop"
+          backgroundImage="/Hero.png"
           subtitle="Spécialiste · Paris 75009"
           title={['Expert', 'Boucles']}
           description="L'art de sublimer vos cheveux naturels"
@@ -45,7 +45,7 @@ export default async function Home() {
 
         {/* ─── SLIDE 2: HERO YANNICK ─── */}
         <HeroSlide
-          backgroundImage="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&h=1080&fit=crop"
+          backgroundImage="/Hero1.png"
           subtitle="Coiffeur · Spécialiste boucles"
           title={['Yannick']}
           description="Une passion, une expertise, une vision"
@@ -63,7 +63,7 @@ export default async function Home() {
                   <div
                     className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                     style={{
-                      backgroundImage: 'url("/prestations.avif")',
+                      backgroundImage: 'url("/Portrait1.png")',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
@@ -81,7 +81,7 @@ export default async function Home() {
                   <div
                     className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                     style={{
-                      backgroundImage: 'url("/realisations.avif")',
+                      backgroundImage: 'url("/Portrait2.png")',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
@@ -95,6 +95,16 @@ export default async function Home() {
             </div>
           </div>
         </section>
+
+        {/* ─── SLIDE 4: HERO — Products/Tools ─── */}
+        <HeroSlide
+          backgroundImage="/Hero2.png"
+          subtitle=""
+          title={['Produits', 'Professionnels']}
+          description=""
+          ctaText=""
+          ctaHref=""
+        />
       </FullScreenScroll>
 
       {/* ─── REVIEWS — Fond noir, citation géante ─── */}

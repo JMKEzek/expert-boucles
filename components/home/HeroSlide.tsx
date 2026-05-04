@@ -106,9 +106,11 @@ export function HeroSlide({
         <p className="text-gris-dark text-xs uppercase tracking-0.2em mb-48">
           {description}
         </p>
-        <Link href={ctaHref} className="btn-inverted">
-          {ctaText}
-        </Link>
+        {ctaText && (
+          <Link href={ctaHref} className="btn-inverted">
+            {ctaText}
+          </Link>
+        )}
       </div>
 
       {/* Scroll indicator */}
