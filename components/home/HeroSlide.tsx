@@ -10,6 +10,7 @@ interface HeroSlideProps {
   description: string;
   ctaText: string;
   ctaHref: string;
+  titleClassName?: string;
 }
 
 export function HeroSlide({
@@ -19,6 +20,7 @@ export function HeroSlide({
   description,
   ctaText,
   ctaHref,
+  titleClassName,
 }: HeroSlideProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -91,10 +93,10 @@ export function HeroSlide({
         ref={contentRef}
         className="relative z-20 text-center pb-48 md:pb-64 px-6 reveal will-change-transform"
       >
-        <span className="section-label text-gris-medium mb-32">
+        <span className="section-label text-blanc mb-32">
           {subtitle}
         </span>
-        <h1 className="text-blanc font-serif font-light uppercase tracking-0.15em text-5xl md:text-7xl lg:text-8xl mb-32">
+        <h1 className={titleClassName ?? "text-blanc font-serif font-light uppercase tracking-0.15em text-5xl md:text-7xl lg:text-8xl mb-32"}>
           {Array.isArray(title)
             ? title.map((line, i) => (
                 <div key={i}>{line}</div>
@@ -103,7 +105,7 @@ export function HeroSlide({
                 <div key={i}>{line}</div>
               ))}
         </h1>
-        <p className="text-gris-dark text-xs uppercase tracking-0.2em mb-48">
+        <p className="text-blanc text-xs uppercase tracking-0.2em mb-48">
           {description}
         </p>
         {ctaText && (

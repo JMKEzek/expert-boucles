@@ -69,7 +69,7 @@ export default async function Home() {
         {/* ─── SLIDE 1: HERO — With parallax effect ─── */}
         <HeroSlide
           backgroundImage="/Hero.png"
-          subtitle="Spécialiste · Paris 75009"
+          subtitle=""
           title={['Expert', 'Boucles']}
           description="L'art de sublimer vos cheveux naturels"
           ctaText="Prendre un rendez-vous"
@@ -137,6 +137,7 @@ export default async function Home() {
           description=""
           ctaText=""
           ctaHref=""
+          titleClassName="text-blanc font-serif font-light uppercase tracking-0.15em text-2xl md:text-3xl lg:text-4xl mb-32"
         />
       </FullScreenScroll>
 
