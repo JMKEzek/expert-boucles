@@ -17,8 +17,8 @@ export interface InstagramFeedProps {
 export function InstagramFeed({ posts, columns = 3 }: InstagramFeedProps) {
   if (posts.length === 0) {
     return (
-      <div className="py-16 text-center">
-        <p className="text-[var(--color-gris-medium)] text-xs uppercase tracking-[0.2em]">
+      <div className="py-48 text-center">
+        <p className="text-gris-medium text-xs uppercase tracking-0.2em">
           Chargement...
         </p>
       </div>
@@ -40,19 +40,19 @@ export function InstagramFeed({ posts, columns = 3 }: InstagramFeedProps) {
           href={post.url || '#'}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative overflow-hidden aspect-square bg-[#2a2a2a] cursor-pointer"
+          className="group relative overflow-hidden aspect-square bg-gris-medium cursor-pointer hover-scale"
         >
           <Image
             src={post.image}
             alt={post.caption || 'Réalisation'}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-cover group-hover:scale-110 transition-transform duration-400"
           />
 
           {/* Hover overlay */}
-          <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/60 transition-all duration-500 flex items-center justify-center">
+          <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/60 transition-all duration-350 flex items-center justify-center">
             <svg
-              className="w-6 h-6 text-blanc opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              className="w-32 h-32 text-blanc opacity-0 group-hover:opacity-100 transition-opacity duration-350"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

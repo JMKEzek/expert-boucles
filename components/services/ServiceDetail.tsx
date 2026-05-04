@@ -17,10 +17,10 @@ export function ServiceDetail({
   category,
 }: ServiceDetailProps) {
   return (
-    <div className="space-y-8">
+    <div className="spacing-gap-loose">
       {/* Hero Image */}
       {image && (
-        <div className="relative h-96 md:h-[500px] w-full rounded-lg overflow-hidden">
+        <div className="relative h-96 md:h-[500px] w-full overflow-hidden image-hero">
           <Image
             src={image}
             alt={name}
@@ -31,33 +31,33 @@ export function ServiceDetail({
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-32">
         {/* Main Content */}
-        <div className="md:col-span-2 space-y-6">
+        <div className="md:col-span-2 spacing-gap-normal">
           {category && (
-            <p className="text-gold font-medium uppercase tracking-wide">{category}</p>
+            <p className="text-or font-medium uppercase tracking-0.15em">{category}</p>
           )}
 
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-noir">{name}</h1>
+          <h1 className="text-h1 text-noir">{name}</h1>
 
-          <p className="text-lg text-gray-600 leading-relaxed">{description}</p>
+          <p className="text-body text-gris-dark leading-relaxed">{description}</p>
 
           {detailedDescription && (
-            <div className="prose prose-lg max-w-none text-gray-700">
+            <div className="text-body text-gris-dark">
               <p>{detailedDescription}</p>
             </div>
           )}
 
           {includes && includes.length > 0 && (
-            <div className="space-y-4">
-              <h3 className="text-2xl font-serif font-bold text-noir">Ce qui est inclus</h3>
-              <ul className="space-y-3">
+            <div className="spacing-gap-tight">
+              <h3 className="text-h3 text-noir">Ce qui est inclus</h3>
+              <ul className="spacing-gap-tight">
                 {includes.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li key={index} className="flex items-start gap-16">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-gold/20">
+                      <div className="flex items-center justify-center h-24 w-24 bg-or/10">
                         <svg
-                          className="h-4 w-4 text-gold"
+                          className="h-16 w-16 text-or"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ export function ServiceDetail({
                         </svg>
                       </div>
                     </div>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-body text-gris-dark">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -76,30 +76,30 @@ export function ServiceDetail({
 
         {/* Sidebar */}
         <div className="md:col-span-1">
-          <div className="sticky top-24 space-y-6">
+          <div className="sticky top-24 spacing-gap-normal">
             {/* Price Card */}
-            <div className="bg-noir text-blanc rounded-lg p-6 space-y-4">
+            <div className="card-dark spacing-gap-tight">
               <div>
-                <p className="text-sm text-gray-400">Tarif</p>
-                <p className="text-4xl font-bold text-gold">{price.toFixed(2)}€</p>
+                <p className="text-label">Tarif</p>
+                <p className="text-4xl font-light text-or mt-8">{price.toFixed(2)} €</p>
               </div>
-              <div className="border-t border-gray-700 pt-4">
-                <p className="text-sm text-gray-400">Durée</p>
-                <p className="text-xl font-semibold">{duration} minutes</p>
+              <div className="border-t border-gris-dark pt-16">
+                <p className="text-label">Durée</p>
+                <p className="text-base font-light text-blanc mt-8">{duration} minutes</p>
               </div>
-              <button className="w-full bg-gold text-noir py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all">
+              <button className="btn-secondary w-full">
                 Réserver maintenant
               </button>
             </div>
 
             {/* Info Box */}
-            <div className="bg-gray-50 rounded-lg p-6 space-y-4">
-              <h4 className="font-serif font-bold text-noir">À savoir</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Consultation gratuite incluse</li>
-                <li>• Résultats visibles dès la première séance</li>
-                <li>• Produits premium utilisés</li>
-                <li>• Suivi post-prestation inclus</li>
+            <div className="bg-gris-light p-24 spacing-gap-tight">
+              <h4 className="font-serif font-light text-noir text-lg tracking-0.1em uppercase">À savoir</h4>
+              <ul className="spacing-gap-tight">
+                <li className="text-body-small text-gris-dark">Consultation gratuite incluse</li>
+                <li className="text-body-small text-gris-dark">Résultats visibles dès la première séance</li>
+                <li className="text-body-small text-gris-dark">Produits premium utilisés</li>
+                <li className="text-body-small text-gris-dark">Suivi post-prestation inclus</li>
               </ul>
             </div>
           </div>

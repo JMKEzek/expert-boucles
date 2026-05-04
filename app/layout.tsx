@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="fr"
       className={`${cormorantGaramond.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col bg-background text-foreground">{children}</body>
+      <body className="min-h-screen flex flex-col bg-blanc text-noir">{children}</body>
     </html>
   );
 }

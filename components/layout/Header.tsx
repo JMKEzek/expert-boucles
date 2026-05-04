@@ -2,10 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const DARK_BG_PAGES = ['/cgv', '/mentions-legales', '/remboursement-annulation', '/a-propos', '/contact'];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const forceDark = DARK_BG_PAGES.some((p) => pathname === p || pathname.startsWith(p + '/'));
+  const useDarkStyle = isScrolled || forceDark;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,22 +36,22 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          isScrolled
-            ? 'bg-blanc border-b border-[var(--color-gris-light)]'
+        className={`fixed top-0 w-full z-50 transition-all duration-350 ${
+          useDarkStyle
+            ? 'bg-blanc border-b border-gris-light'
             : 'bg-transparent'
         }`}
       >
-        <div className="flex items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 py-5 md:py-6">
+        <div className="flex items-center justify-between px-6 sm:px-10 md:px-20 lg:px-32 py-3 md:py-4">
 
           {/* Nav gauche — desktop */}
-          <nav className="hidden md:flex items-center gap-8 flex-1">
+          <nav className="hidden md:flex items-center gap-32 flex-1">
             {navLeft.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[10px] uppercase tracking-[0.2em] font-light transition-colors duration-200 hover:opacity-50 ${
-                  isScrolled ? 'text-noir' : 'text-blanc'
+                className={`text-11px uppercase tracking-0.2em font-medium transition-colors duration-350 hover-opacity ${
+                  useDarkStyle ? 'text-noir' : 'text-blanc'
                 }`}
               >
                 {link.label}
@@ -55,32 +62,32 @@ export function Header() {
           {/* Logo centré */}
           <Link
             href="/"
-            className={`text-center flex-shrink-0 mx-8 transition-colors duration-200 ${
-              isScrolled ? 'text-noir' : 'text-blanc'
+            className={`text-center flex-shrink-0 mx-8 transition-colors duration-350 group ${
+              useDarkStyle ? 'text-noir' : 'text-blanc'
             }`}
           >
             <span
-              className="block font-serif font-light tracking-[0.3em] uppercase"
-              style={{ fontSize: '15px', letterSpacing: '0.35em' }}
+              className="block font-serif font-light uppercase group-hover:opacity-60 transition-opacity duration-350"
+              style={{ fontSize: '19px', letterSpacing: '0.35em' }}
             >
               Expert Boucles
             </span>
             <span
-              className="block font-light tracking-[0.25em] uppercase mt-0.5"
-              style={{ fontSize: '9px', letterSpacing: '0.3em', color: 'var(--color-gris-medium)' }}
+              className="block font-light uppercase mt-0.5 group-hover:opacity-60 transition-opacity duration-350"
+              style={{ fontSize: '12px', letterSpacing: '0.3em', color: useDarkStyle ? 'var(--color-gris-medium)' : 'var(--color-gris-dark)' }}
             >
               Paris
             </span>
           </Link>
 
           {/* Nav droite — desktop */}
-          <nav className="hidden md:flex items-center gap-8 flex-1 justify-end">
+          <nav className="hidden md:flex items-center gap-32 flex-1 justify-end">
             {navRight.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[10px] uppercase tracking-[0.2em] font-light transition-colors duration-200 hover:opacity-50 ${
-                  isScrolled ? 'text-noir' : 'text-blanc'
+                className={`text-11px uppercase tracking-0.2em font-medium transition-colors duration-350 hover-opacity ${
+                  useDarkStyle ? 'text-noir' : 'text-blanc'
                 }`}
               >
                 {link.label}
@@ -88,8 +95,8 @@ export function Header() {
             ))}
             <Link
               href="/prestations"
-              className={`text-[10px] uppercase tracking-[0.2em] font-light border px-5 py-2.5 transition-all duration-200 ${
-                isScrolled
+              className={`text-11px uppercase tracking-0.2em font-medium border px-20 py-4 transition-all duration-350 ${
+                useDarkStyle
                   ? 'border-noir text-noir hover:bg-noir hover:text-blanc'
                   : 'border-blanc text-blanc hover:bg-blanc hover:text-noir'
               }`}
@@ -100,26 +107,26 @@ export function Header() {
 
           {/* Mobile — bouton menu */}
           <button
-            className={`md:hidden flex flex-col gap-1.5 p-2 ml-auto transition-colors duration-200 ${
-              isScrolled ? 'text-noir' : 'text-blanc'
+            className={`md:hidden flex flex-col gap-1.5 p-2 ml-auto transition-colors duration-350 ${
+              useDarkStyle ? 'text-noir' : 'text-blanc'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Ouvrir le menu"
           >
             <span
-              className={`w-5 h-px transition-all duration-300 ${
+              className={`w-5 h-px transition-all duration-350 ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''
-              } ${isScrolled ? 'bg-noir' : 'bg-blanc'}`}
+              } ${useDarkStyle ? 'bg-noir' : 'bg-blanc'}`}
             />
             <span
-              className={`w-5 h-px transition-all duration-300 ${
+              className={`w-5 h-px transition-all duration-350 ${
                 isMobileMenuOpen ? 'opacity-0' : ''
-              } ${isScrolled ? 'bg-noir' : 'bg-blanc'}`}
+              } ${useDarkStyle ? 'bg-noir' : 'bg-blanc'}`}
             />
             <span
-              className={`w-5 h-px transition-all duration-300 ${
+              className={`w-5 h-px transition-all duration-350 ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''
-              } ${isScrolled ? 'bg-noir' : 'bg-blanc'}`}
+              } ${useDarkStyle ? 'bg-noir' : 'bg-blanc'}`}
             />
           </button>
         </div>
@@ -127,16 +134,16 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-40 bg-noir transition-all duration-500 ${
+        className={`fixed inset-0 z-40 bg-noir transition-all duration-350 ${
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-10">
+        <div className="flex flex-col items-center justify-center h-full gap-40">
           {[...navLeft, ...navRight].map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-blanc font-serif font-light text-3xl uppercase tracking-[0.2em] hover:opacity-50 transition-opacity"
+              className="text-blanc font-serif font-light text-3xl uppercase tracking-0.2em hover-opacity transition-opacity duration-350"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
@@ -144,7 +151,7 @@ export function Header() {
           ))}
           <Link
             href="/prestations"
-            className="btn-inverted mt-4"
+            className="btn-inverted mt-16"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Réserver

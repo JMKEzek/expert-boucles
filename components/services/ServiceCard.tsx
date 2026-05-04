@@ -22,19 +22,19 @@ export function ServiceCard({
   category,
 }: ServiceCardProps) {
   return (
-    <Link href={`/prestations/${slug}`} className="group block">
-      {/* Image 4:5 portrait */}
-      <div className="relative overflow-hidden mb-6" style={{ paddingBottom: '125%' }}>
+    <Link href={`/prestations/${slug}`} className="group block hover-lift">
+      {/* Image 4:5 portrait (product ratio) */}
+      <div className="relative overflow-hidden mb-24 image-product bg-gris-medium">
         {image ? (
           <Image
             src={image}
             alt={name}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-cover group-hover:scale-105 transition-transform duration-400"
           />
         ) : (
-          <div className="absolute inset-0 bg-[#2a2a2a] group-hover:bg-[#333] transition-colors duration-500 flex items-end p-6">
-            <span className="text-[var(--color-gris-dark)] text-[10px] uppercase tracking-[0.25em]">
+          <div className="absolute inset-0 bg-gris-dark group-hover:bg-noir transition-colors duration-350 flex items-end p-24">
+            <span className="text-gris-light text-10px uppercase tracking-0.25em">
               {name}
             </span>
           </div>
@@ -44,25 +44,25 @@ export function ServiceCard({
       {/* Infos */}
       <div>
         {category && (
-          <span className="block text-[var(--color-gris-medium)] text-[10px] uppercase tracking-[0.25em] mb-2">
+          <span className="block text-gris-medium text-10px uppercase tracking-0.25em mb-12">
             {category}
           </span>
         )}
 
-        <h3 className="font-serif font-light uppercase tracking-[0.1em] text-base md:text-lg text-noir mb-2 group-hover:opacity-60 transition-opacity">
+        <h3 className="font-serif font-light uppercase tracking-0.1em text-base md:text-lg text-noir mb-12 group-hover:opacity-60 transition-opacity duration-350">
           {name}
         </h3>
 
-        <p className="text-[var(--color-gris-dark)] text-xs leading-relaxed mb-4 line-clamp-2">
+        <p className="text-gris-dark text-xs leading-relaxed mb-16 line-clamp-2">
           {description}
         </p>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-16">
           <span className="text-noir text-xs font-light tracking-wide">
             {price} €
           </span>
-          <span className="text-[var(--color-gris-light)] text-xs">—</span>
-          <span className="text-[var(--color-gris-medium)] text-[10px] uppercase tracking-[0.15em]">
+          <span className="text-gris-light text-xs">—</span>
+          <span className="text-gris-medium text-10px uppercase tracking-0.15em">
             {duration} min
           </span>
         </div>
