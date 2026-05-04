@@ -1,0 +1,141 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - banner [ref=e6]:
+          - banner [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e12]:
+                - link "expert-boucles.com" [ref=e17] [cursor=pointer]:
+                  - /url: https://expert-boucles.com
+                  - img "expert-boucles.com" [ref=e18]
+                - generic [ref=e22]:
+                  - navigation "Menu" [ref=e23]:
+                    - list [ref=e24]:
+                      - listitem [ref=e25]:
+                        - link "Accueil" [ref=e26] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/
+                      - listitem [ref=e27]:
+                        - link "À propos" [ref=e28] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/qui-suis-je
+                      - listitem [ref=e29]:
+                        - link "Prestations et Tarifs" [ref=e30] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/prestations-et-tarifs-cheveux-boucles
+                      - listitem [ref=e31]:
+                        - link "Réalisations" [ref=e32] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/realisations
+                      - listitem [ref=e33]:
+                        - link "Contact" [ref=e34] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/contact
+                  - text:  
+              - generic [ref=e38]:
+                - navigation "Menu" [ref=e39]:
+                  - list [ref=e40]:
+                    - listitem [ref=e41]:
+                      - link "Prendre rendez-vous" [ref=e42] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/prendre-rendez-vous
+                        - generic [ref=e43]: 
+                        - generic [ref=e44]: Prendre rendez-vous
+                    - listitem [ref=e45]:
+                      - link "Mon compte" [ref=e46] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/mon-compte
+                        - generic [ref=e47]: 
+                        - generic [ref=e48]: Mon compte
+                - text:    
+      - main [ref=e53]:
+        - article [ref=e57]:
+          - generic [ref=e59]:
+            - generic [ref=e63]:
+              - img "expert-boucles.com" [ref=e66]
+              - heading "Expert bouclES" [level=2] [ref=e69]
+            - generic [ref=e73]:
+              - generic [ref=e75]:
+                - generic [ref=e77]:
+                  - heading "Sublimez vos cheveux bouclés" [level=2] [ref=e80]
+                  - paragraph [ref=e83]:
+                    - text: Expert en cheveux bouclés & balayage curly à Paris
+                    - text: Chaque texture est unique. Chaque boucle raconte quelque chose. Je réalise des coupes et des balayages sur-
+                    - text: mesure, pensés pour révéler la forme, le volume et la lumière naturelle de vos cheveux texturés. À travers une approche précise, respectueuse et créative, je sublime vos boucles… pour un style qui vous ressemble, en mieux.
+                - generic [ref=e87]:
+                  - generic [ref=e92]: Ce tableau représente les types de boucles que je travaille. vos boucles en font-elles partie ?
+                  - generic [ref=e97]: Soins & Routines adaptés
+              - link "Voir les prestations" [ref=e109] [cursor=pointer]:
+                - /url: https://expert-boucles.com/prestations-et-tarifs-cheveux-boucles
+                - generic [ref=e111]: Voir les prestations
+            - generic [ref=e119]:
+              - heading "Des cheveux uniques" [level=2] [ref=e126]
+              - generic [ref=e134]:
+                - heading "DES CHEVEUX UNIQUES, UN ACCOMPAGNEMENT SUR-MESURE" [level=3] [ref=e137]
+                - paragraph [ref=e140]: Les cheveux bouclés ne suivent aucune règle. Leur texture, leur forme et leurs besoins varient d’une personne à l’autre. Ce sont des cheveux vivants, dynamiques, souvent fragilisés par des routines inadéquates ou des produits inadaptés. Chez Expert Boucles, je vous propose un accompagnement personnalisé qui respecte la structure naturelle de vos boucles, leur rythme et leurs besoins réels.
+              - generic [ref=e144]:
+                - heading "Les Cheveux Bouclés" [level=3] [ref=e147]
+                - paragraph [ref=e150]:
+                  - text: Grâce à un diagnostic précis et une approche fondée sur les trois piliers
+                  - text: "essentiels (hydratation, nutrition et reconstruction), je vous aide à mettre en place une routine simple, régulière et efficace. L’objectif : vous reconnecter à vos boucles, restaurer leur vitalité, sublimer leur"
+                  - text: forme et révéler toute leur beauté, en douceur et sur le long terme.
+              - generic [ref=e156]: Vos cheveux bouclés sont entre de bonnes mains.
+              - link "Prendre rendez-vous" [ref=e164] [cursor=pointer]:
+                - /url: https://expert-boucles.com/prendre-rendez-vous
+                - generic [ref=e166]: Prendre rendez-vous
+            - generic [ref=e177]:
+              - paragraph [ref=e180]: Je suis
+              - heading "Spécialisé en cheveux bouclés" [level=2] [ref=e183]
+              - paragraph [ref=e186]:
+                - text: Chaque boucle a son langage, sa texture, ses besoins.Mon rôle ? Les comprendre, les sublimer, les respecter.À travers une approche experte et personnalisée – coupe, soin, et techniques lumière adaptées… je vous aide à révéler la vraie nature de vos cheveux bouclés, celle qui
+                - text: ne demande qu’à s’exprimer pleinement, en beauté et en santé. Parce que les boucles ne sont pas un type, mais un univers.
+                - text: – Yannick
+              - generic [ref=e188]: "- Yannick -"
+              - link "En savoir plus" [ref=e196] [cursor=pointer]:
+                - /url: https://expert-boucles.com/qui-suis-je
+                - generic [ref=e198]: En savoir plus
+      - contentinfo [ref=e213]:
+        - generic [ref=e224]:
+          - img "Salon de coiffure" [ref=e226]
+          - generic [ref=e228]:
+            - generic [ref=e229]: Vous serez accueilli au sein d'un lieu de coworking situé au 50 rue de la Chaussée d' Antin Paris 75009 dans une atmosphère conviviale et détendue. Sur rendez-vous uniquement afin de vous recevoir dans les meilleures conditions possible.
+            - link "Voir le salon de coworking" [ref=e231] [cursor=pointer]:
+              - /url: ""
+        - generic [ref=e233]:
+          - paragraph [ref=e238]:
+            - text: Copyright © 2024
+            - text: Propulsé par
+            - link "Tenorweb" [ref=e239] [cursor=pointer]:
+              - /url: https://www.tenorweb.com
+          - generic [ref=e241]:
+            - generic [ref=e244]: Horaire
+            - generic [ref=e247]:
+              - text: Mardi | Mercredi 12h - 20h
+              - text: Vendredi | 12h - 20h
+              - text: Dimanche | 12h - 20h
+          - generic [ref=e249]:
+            - generic [ref=e252]: Téléphone
+            - link "07 81 31 30 94" [ref=e256] [cursor=pointer]:
+              - /url: tel:+33781313094
+          - generic [ref=e258]:
+            - generic [ref=e261]: Diagnostic / Email
+            - generic [ref=e264]: contact@expert-boucles.com expertboucles.formation@gmail.com
+          - generic [ref=e266]:
+            - generic [ref=e269]: Suivez-nous
+            - link "Instagram" [ref=e274] [cursor=pointer]:
+              - /url: https://www.instagram.com/expert_boucles/
+              - generic [ref=e275]: Instagram
+              - generic [ref=e276]: 
+        - navigation "Menu" [ref=e283]:
+          - list [ref=e284]:
+            - listitem [ref=e285]:
+              - link "Mon compte" [ref=e286] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mon-compte
+            - listitem [ref=e287]:
+              - link "Mentions Légales" [ref=e288] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mentions-legales
+            - listitem [ref=e289]:
+              - link "Remboursements et Annulation" [ref=e290] [cursor=pointer]:
+                - /url: https://expert-boucles.com/remboursement-annulation
+            - listitem [ref=e291]:
+              - link "CGV" [ref=e292] [cursor=pointer]:
+                - /url: https://expert-boucles.com/cgv
+  - text: 
+  - generic [ref=e293]: desktop
+  - status [ref=e294]

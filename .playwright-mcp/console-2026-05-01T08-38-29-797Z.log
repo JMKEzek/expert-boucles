@@ -1,0 +1,12 @@
+[      63ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:0
+[     610ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ:0
+[     610ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.cappasity.com/api/player/cappasity-ai:0
+[     662ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:269
+[     663ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:269
+[     674ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ:0
+[     735ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     735ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     738ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     738ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[    5534ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[  120805ms] [WARNING] [DataLayer] Consent timeout reached @ https://try.abtasty.com/3ea6fa8b93481ef1a8682628a2276e88/main.c439095ec3a113a68145.js:0

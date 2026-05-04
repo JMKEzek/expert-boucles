@@ -1,0 +1,137 @@
+EXPERT BOUCLES - FILE REFERENCE GUIDE
+=====================================
+
+PROJECT ROOT: /c/Users/jujum/Documents/Expert_boucle/expert-boucles
+
+MAIN PAGES (app/)
+=================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/layout.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/globals.css
+
+PUBLIC PAGES (app/(public)/)
+============================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/layout.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/prestations/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/prestations/[slug]/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/a-propos/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/contact/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/realisations/page.tsx
+
+AUTH PAGES (app/(auth)/)
+=======================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(auth)/layout.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(auth)/connexion/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(auth)/inscription/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(auth)/mon-compte/page.tsx
+
+LEGAL PAGES (app/(legal)/)
+=========================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(legal)/layout.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(legal)/cgv/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(legal)/mentions-legales/page.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(legal)/remboursement-annulation/page.tsx
+
+LAYOUT COMPONENTS (components/layout/)
+======================================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/layout/Header.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/layout/Footer.tsx
+
+SERVICE COMPONENTS (components/services/)
+=========================================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/services/ServiceCard.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/services/ServiceGrid.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/services/ServiceDetail.tsx
+
+REVIEW COMPONENTS (components/reviews/)
+=======================================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/reviews/ReviewCarousel.tsx
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/reviews/ReviewCarousel.types.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/reviews/InstagramFeed.tsx
+
+BOOKING COMPONENTS (components/booking/)
+========================================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/booking/AcuityEmbed.tsx
+
+UI COMPONENTS (components/ui/)
+=============================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/ui/button.tsx
+
+UTILITIES (lib/)
+================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/lib/utils.ts
+
+CONFIGURATION FILES
+===================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/next.config.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/tsconfig.json
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/tailwind.config.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/components.json
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/postcss.config.mjs
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/package.json
+
+DOCUMENTATION (Project Root)
+============================
+/c/Users/jujum/Documents/Expert_boucle/CLAUDE.md
+/c/Users/jujum/Documents/Expert_boucle/IMPLEMENTATION_PLAN.md
+/c/Users/jujum/Documents/Expert_boucle/AGENT_BRIEFS_NEXTJS.md
+/c/Users/jujum/Documents/Expert_boucle/COMPLETION_SUMMARY.md
+/c/Users/jujum/Documents/Expert_boucle/HANDOFF_TO_AGENT3.md
+/c/Users/jujum/Documents/Expert_boucle/FILE_REFERENCE.txt
+
+DOCUMENTATION (expert-boucles/)
+===============================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/GETTING_STARTED.md
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/AGENT2_DELIVERABLES.md
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/BUILD_INFO.txt
+
+PUBLIC FILES
+============
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/public/logo.svg
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/public/hero.jpg
+
+KEY FILES TO EDIT
+=================
+
+For Design Changes:
+  → /c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/globals.css
+
+For Page Content:
+  → /c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/page.tsx (home)
+  → /c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/(public)/*/page.tsx
+
+For Components:
+  → /c/Users/jujum/Documents/Expert_boucle/expert-boucles/components/*/[ComponentName].tsx
+
+For Configuration:
+  → /c/Users/jujum/Documents/Expert_boucle/expert-boucles/tailwind.config.ts
+  → /c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/layout.tsx
+
+API ROUTES TO CREATE (Agent 3)
+=============================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/services/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/services/[slug]/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/google-reviews/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/instagram-feed/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/contact/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/bookings/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/bookings/me/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/webhooks/acuity/route.ts
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/app/api/auth/[...nextauth]/route.ts
+
+PRISMA SCHEMA (Agent 3)
+======================
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/prisma/schema.prisma
+/c/Users/jujum/Documents/Expert_boucle/expert-boucles/prisma/seed.ts
+
+QUICK NAVIGATION
+================
+
+Home: /c/Users/jujum/Documents/Expert_boucle/expert-boucles
+
+Build project:
+  cd /c/Users/jujum/Documents/Expert_boucle/expert-boucles && npm run build
+
+Start dev server:
+  cd /c/Users/jujum/Documents/Expert_boucle/expert-boucles && npm run dev
+

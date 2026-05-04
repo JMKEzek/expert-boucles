@@ -1,0 +1,22 @@
+[      66ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:0
+[     106ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ:0
+[     134ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:269
+[     134ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:269
+[     179ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ:0
+[     311ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.cappasity.com/api/player/cappasity-ai:0
+[     567ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     567ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     570ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     570ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     745ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.quantummetric.com/qscripts/quantum-ysl.js:72
+[     745ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.quantummetric.com/qscripts/quantum-ysl.js:72
+[     793ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=G-123456&cx=c&gtm=4e64t1h1:129
+[     794ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=G-123456&cx=c&gtm=4e64t1h1:129
+[     796ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=G-123456&cx=c&gtm=4e64t1h1:686
+[     829ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://sc-static.net/scevent.min.js:1
+[     921ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/A95LV-6TTAK-UYDA2-EFFSR-VFSSZ:0
+[     925ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/A95LV-6TTAK-UYDA2-EFFSR-VFSSZ:0
+[     967ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=DC-4569009&cx=c&gtm=4e64t1h1:132
+[     968ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=DC-4569009&cx=c&gtm=4e64t1h1:132
+[    1243ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://assets.bounceexchange.com/assets/smart-tag/versioned/main-v2_a8cb9255306dcf234ccb7ceb0a60d76f.br.js:1
+[    3926ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/A95LV-6TTAK-UYDA2-EFFSR-VFSSZ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://sskering.ysl.com/_/service_worker/63b0/sw_iframe.html?origin=https%3A%2F%2Fwww.ysl.com&1p=1:0

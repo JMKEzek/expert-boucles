@@ -1,0 +1,35 @@
+[      84ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:0
+[     170ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ:0
+[     251ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:269
+[     251ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.ysl.com/fr-fr:269
+[     307ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ:0
+[     309ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.cappasity.com/api/player/cappasity-ai:0
+[     687ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     687ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     689ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     690ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.cookielaw.org/scripttemplates/202604.1.0/otBannerSdk.js:6
+[     809ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.quantummetric.com/qscripts/quantum-ysl.js:72
+[     810ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://cdn.quantummetric.com/qscripts/quantum-ysl.js:72
+[     864ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=G-123456&cx=c&gtm=4e64t1h1:129
+[     864ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=G-123456&cx=c&gtm=4e64t1h1:129
+[     866ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=G-123456&cx=c&gtm=4e64t1h1:686
+[     963ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=DC-4569009&cx=c&gtm=4e64t1h1:132
+[     964ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://www.googletagmanager.com/gtag/js?id=DC-4569009&cx=c&gtm=4e64t1h1:132
+[     986ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/A95LV-6TTAK-UYDA2-EFFSR-VFSSZ:0
+[    1017ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://s.go-mpulse.net/boomerang/A95LV-6TTAK-UYDA2-EFFSR-VFSSZ:0
+[    1111ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://sc-static.net/scevent.min.js:1
+[    1333ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://assets.bounceexchange.com/assets/smart-tag/versioned/main-v2_a8cb9255306dcf234ccb7ceb0a60d76f.br.js:1
+[    2636ms] [ERROR] Ignoring duplicate Content-Security-Policy directive 'worker-src'. @ https://s.pinimg.com/ct/lib/main.8bbbbe54.js:0
+[    4020ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/A95LV-6TTAK-UYDA2-EFFSR-VFSSZ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://sskering.ysl.com/_/service_worker/63b0/sw_iframe.html?origin=https%3A%2F%2Fwww.ysl.com&1p=1:0
+[    4145ms] [ERROR] Access to CSS stylesheet at 'https://eu3-cdn.inside-graph.com/ig.css?dev=1&_996bfc2e3d-139951' from origin 'https://www.ysl.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ about:blank:0
+[    4146ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://eu3-cdn.inside-graph.com/ig.css?dev=1&_996bfc2e3d-139951:0
+[    4198ms] [LOG] front.js => connectedToInside @ https://cdn.quantummetric.com/qscripts/quantum-ysl.js:120
+[    4215ms] [ERROR] Access to CSS stylesheet at 'https://eu3-cdn.inside-graph.com/custom/3-customGeneralInside.css?1775223569447' from origin 'https://www.ysl.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ about:blank:0
+[    4215ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://eu3-cdn.inside-graph.com/custom/3-customGeneralInside.css?1775223569447:0
+[    9352ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[   16360ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[   19859ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[   23358ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[   26866ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[   30397ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0
+[   34351ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/K9JYF-NA9GU-K758U-APJ5Q-E7LPJ was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.ysl.com/fr-fr:0

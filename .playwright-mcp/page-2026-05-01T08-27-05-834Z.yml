@@ -1,0 +1,404 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - banner [ref=e6]:
+          - banner [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e12]:
+                - link "expert-boucles.com" [ref=e17] [cursor=pointer]:
+                  - /url: https://expert-boucles.com
+                  - img "expert-boucles.com" [ref=e18]
+                - generic [ref=e22]:
+                  - navigation "Menu" [ref=e23]:
+                    - list [ref=e24]:
+                      - listitem [ref=e25]:
+                        - link "Accueil" [ref=e26] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/
+                      - listitem [ref=e27]:
+                        - link "À propos" [ref=e28] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/qui-suis-je
+                      - listitem [ref=e29]:
+                        - link "Prestations et Tarifs" [ref=e30] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/prestations-et-tarifs-cheveux-boucles
+                      - listitem [ref=e31]:
+                        - link "Réalisations" [ref=e32] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/realisations
+                      - listitem [ref=e33]:
+                        - link "Contact" [ref=e34] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/contact
+                  - text:  
+              - generic [ref=e38]:
+                - navigation "Menu" [ref=e39]:
+                  - list [ref=e40]:
+                    - listitem [ref=e41]:
+                      - link "Prendre rendez-vous" [ref=e42] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/prendre-rendez-vous
+                        - generic [ref=e43]: 
+                        - generic [ref=e44]: Prendre rendez-vous
+                    - listitem [ref=e45]:
+                      - link "Mon compte" [ref=e46] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/mon-compte
+                        - generic [ref=e47]: 
+                        - generic [ref=e48]: Mon compte
+                - text:    
+      - main [ref=e53]:
+        - article [ref=e57]:
+          - generic [ref=e58]:
+            - text: 
+            - generic [ref=e59]:
+              - button "Voir la galerie d’images en plein écran" [ref=e60] [cursor=pointer]:  🔍
+              - figure [ref=e61]:
+                - link "Forfait coupe cheuveux mi long" [ref=e63] [cursor=pointer]:
+                  - /url: https://expert-boucles.com/wp-content/uploads/2023/10/D24CEDEB-E0D1-4DA5-B619-01A9982D3A3F.png
+                  - img "Forfait coupe cheuveux mi long" [ref=e64]
+            - generic [ref=e65]:
+              - heading "Forfait coupe cheuveux mi long" [level=1] [ref=e66]
+              - paragraph [ref=e67]:
+                - generic [ref=e69]: 90€
+                - text: —60 minutes
+              - paragraph [ref=e71]:
+                - text: "Ce forfait comprend :"
+                - text: Diagnostic – Coupe de cheveux sec – Shampoing – Conditionner – Séchage au diffuseur
+              - generic [ref=e72]:
+                - generic [ref=e73]:
+                  - group "Choisissez..." [ref=e74]:
+                    - generic [ref=e75]:
+                      - generic [ref=e76]:
+                        - generic [ref=e77]:
+                          - generic "Précédent" [ref=e78]:
+                            - generic [ref=e79]: ← Précédent
+                          - generic "Suivant" [ref=e80]:
+                            - generic [ref=e81]: → Suivant
+                          - generic [ref=e82]:
+                            - text: mai
+                            - generic [ref=e83]: "2026"
+                        - table [ref=e84]:
+                          - rowgroup [ref=e85]:
+                            - row "lun mar mer jeu ven sam dim" [ref=e86]:
+                              - columnheader "lun" [ref=e87]
+                              - columnheader "mar" [ref=e88]
+                              - columnheader "mer" [ref=e89]
+                              - columnheader "jeu" [ref=e90]
+                              - columnheader "ven" [ref=e91]
+                              - columnheader "sam" [ref=e92]
+                              - columnheader "dim" [ref=e93]
+                          - rowgroup [ref=e94]:
+                            - row "27 28 29 30 1 2 3" [ref=e95]:
+                              - cell "27" [ref=e96]:
+                                - generic [ref=e97]: "27"
+                              - cell "28" [ref=e98]:
+                                - generic [ref=e99]: "28"
+                              - cell "29" [ref=e100]:
+                                - generic [ref=e101]: "29"
+                              - cell "30" [ref=e102]:
+                                - generic [ref=e103]: "30"
+                              - cell "1" [ref=e104]:
+                                - generic [ref=e105]: "1"
+                              - cell "2" [ref=e106]:
+                                - generic [ref=e107]: "2"
+                              - cell "3" [ref=e108]:
+                                - generic [ref=e109]: "3"
+                            - row "4 5 6 7 8 9 10" [ref=e110]:
+                              - cell "4" [ref=e111]:
+                                - generic [ref=e112]: "4"
+                              - cell "5" [ref=e113]:
+                                - generic [ref=e114]: "5"
+                              - cell "6" [ref=e115]:
+                                - generic [ref=e116]: "6"
+                              - cell "7" [ref=e117]:
+                                - generic [ref=e118]: "7"
+                              - cell "8" [ref=e119]:
+                                - generic [ref=e120]: "8"
+                              - cell "9" [ref=e121]:
+                                - generic [ref=e122]: "9"
+                              - cell "10" [ref=e123]:
+                                - generic [ref=e124]: "10"
+                            - row "11 12 13 14 15 16 17" [ref=e125]:
+                              - cell "11" [ref=e126]:
+                                - generic [ref=e127]: "11"
+                              - cell "12" [ref=e128]:
+                                - generic [ref=e129]: "12"
+                              - cell "13" [ref=e130]:
+                                - generic [ref=e131]: "13"
+                              - cell "14" [ref=e132]:
+                                - generic [ref=e133]: "14"
+                              - cell "15" [ref=e134]:
+                                - generic [ref=e135]: "15"
+                              - cell "16" [ref=e136]:
+                                - generic [ref=e137]: "16"
+                              - cell "17" [ref=e138]:
+                                - generic [ref=e139]: "17"
+                            - row "18 19 20 21 22 23 24" [ref=e140]:
+                              - cell "18" [ref=e141]:
+                                - generic [ref=e142]: "18"
+                              - cell "19" [ref=e143]:
+                                - generic [ref=e144]: "19"
+                              - cell "20" [ref=e145]:
+                                - generic [ref=e146]: "20"
+                              - cell "21" [ref=e147]:
+                                - generic [ref=e148]: "21"
+                              - cell "22" [ref=e149]:
+                                - generic [ref=e150]: "22"
+                              - cell "23" [ref=e151]:
+                                - generic [ref=e152]: "23"
+                              - cell "24" [ref=e153]:
+                                - generic [ref=e154]: "24"
+                            - row "25 26 27 28 29 30 31" [ref=e155]:
+                              - cell "25" [ref=e156]:
+                                - generic [ref=e157]: "25"
+                              - cell "26" [ref=e158]:
+                                - generic [ref=e159]: "26"
+                              - cell "27" [ref=e160]:
+                                - generic [ref=e161]: "27"
+                              - cell "28" [ref=e162]:
+                                - generic [ref=e163]: "28"
+                              - cell "29" [ref=e164]:
+                                - generic [ref=e165]: "29"
+                              - cell "30" [ref=e166]:
+                                - generic [ref=e167]: "30"
+                              - cell "31" [ref=e168]:
+                                - generic [ref=e169]: "31"
+                      - text: 
+                      - generic [ref=e170]: 
+                      - text: 
+                  - generic [ref=e172]: Choisissez une date ci-dessus pour voir les créneaux horaires disponibles.
+                - generic [ref=e173]: quantité de Forfait coupe cheuveux mi long
+                - button "Réserver maintenant" [disabled] [ref=e174]
+      - contentinfo [ref=e176]:
+        - generic [ref=e185]:
+          - generic [ref=e187] [cursor=pointer]:
+            - strong [ref=e189]: EXCELLENT
+            - generic [ref=e190]:
+              - img "Google star 1" [ref=e191]
+              - img "Google star 2" [ref=e192]
+              - img "Google star 3" [ref=e193]
+              - img "Google star 4" [ref=e194]
+              - img "Google star 5.0.7" [ref=e195]
+            - generic [ref=e197]:
+              - text: Basée sur
+              - strong [ref=e198]:
+                - link "279 avis" [ref=e199]:
+                  - /url: https://admin.trustindex.io/api/googleWriteReview?place-id=ChIJK5pDUlgWEE4RRvAh1hZSTQ0
+            - img "Google" [ref=e202]
+          - generic [ref=e203]:
+            - button "Avis suivante" [ref=e204]
+            - generic [ref=e205]:
+              - generic [ref=e207]:
+                - generic [ref=e208]:
+                  - img "Google" [ref=e210]
+                  - img "Laura H profile picture" [ref=e212]
+                  - generic [ref=e213]:
+                    - generic [ref=e214]: Laura H
+                    - generic [ref=e215]: 17 Avril 2026
+                - generic [ref=e216]:
+                  - img "Google star 1" [ref=e217]
+                  - img "Google star 2" [ref=e218]
+                  - img "Google star 3" [ref=e219]
+                  - img "Google star 4" [ref=e220]
+                  - img "Google star 5" [ref=e221]
+                - generic [ref=e223]: Yannick a su comprendre exactement ce que je voulais, avoir du volume tout en gardant un peu de longueur et en redéfinissant mes boucles. La coupe est parfaite et mes boucles sont + dessinées
+                - button "Lire la suite" [ref=e225] [cursor=pointer]
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - img "Google" [ref=e230]
+                  - img "Salome Bnt profile picture" [ref=e232]
+                  - generic [ref=e233]:
+                    - generic [ref=e234]: Salome Bnt
+                    - generic [ref=e235]: 9 Avril 2026
+                - generic [ref=e236]:
+                  - img "Google star 1" [ref=e237]
+                  - img "Google star 2" [ref=e238]
+                  - img "Google star 3" [ref=e239]
+                  - img "Google star 4" [ref=e240]
+                  - img "Google star 5" [ref=e241]
+                - generic [ref=e243]:
+                  - text: J’ai passé un excellent moment au salon de Yannick.
+                  - text: À l’écoute, très professionnel, il prend réellement le temps de donner de précieux conseils.
+                  - text: Merci !
+                - button "Lire la suite" [ref=e245] [cursor=pointer]
+              - generic [ref=e247]:
+                - generic [ref=e248]:
+                  - img "Google" [ref=e250]
+                  - img "Audrey Souama profile picture" [ref=e252]
+                  - generic [ref=e253]:
+                    - generic [ref=e254]: Audrey Souama
+                    - generic [ref=e255]: 7 Avril 2026
+                - generic [ref=e256]:
+                  - img "Google star 1" [ref=e257]
+                  - img "Google star 2" [ref=e258]
+                  - img "Google star 3" [ref=e259]
+                  - img "Google star 4" [ref=e260]
+                  - img "Google star 5" [ref=e261]
+                - generic [ref=e263]:
+                  - text: Très bonne expérience, je recommande à 100%.
+                  - text: Yannick est de très bon conseil et très sympathique ! Un coup de ciseaux remarquable. Merci Yannick !
+                - button "Lire la suite" [ref=e265] [cursor=pointer]
+              - generic [ref=e267]:
+                - generic [ref=e268]:
+                  - img "Google" [ref=e270]
+                  - img "Kenza Courtois profile picture" [ref=e272]
+                  - generic [ref=e273]:
+                    - generic [ref=e274]: Kenza Courtois
+                    - generic [ref=e275]: 31 Mars 2026
+                - generic [ref=e276]:
+                  - img "Google star 1" [ref=e277]
+                  - img "Google star 2" [ref=e278]
+                  - img "Google star 3" [ref=e279]
+                  - img "Google star 4" [ref=e280]
+                  - img "Google star 5" [ref=e281]
+                - generic [ref=e283]:
+                  - text: J’ai enfin trouvé mon coiffeur ! Ça fait maintenant un peu plus de 2 ans que je confie mes boucles à Yannick, et le résultat est toujours impeccable. Je ressors à chaque fois avec une coupe qui me met vraiment en valeur et des boucles parfaitement sublimées. Un immense merci, surtout qu’il m’a clairement réconciliée avec les coiffeurs !
+                  - text: "Mention spéciale pour le head spa : un pur moment de détente ✨️"
+                - button "Lire la suite" [ref=e285] [cursor=pointer]
+              - generic [ref=e287]:
+                - generic [ref=e288]:
+                  - img "Google" [ref=e290]
+                  - img "Maëlle adjoualé (Maëlle) profile picture" [ref=e292]
+                  - generic [ref=e293]:
+                    - generic [ref=e294]: Maëlle adjoualé (Maëlle)
+                    - generic [ref=e295]: 30 Mars 2026
+                - generic [ref=e296]:
+                  - img "Google star 1" [ref=e297]
+                  - img "Google star 2" [ref=e298]
+                  - img "Google star 3" [ref=e299]
+                  - img "Google star 4" [ref=e300]
+                  - img "Google star 5" [ref=e301]
+                - generic [ref=e303]: Très agréable, j’ai fait une décoloration sur cheveux déjà très foncés plus 2 coloration blonde et rouge , il a su donner de bon conseil pour la disposition des cheveux et la coiffure et comme je le voulais.
+                - button "Lire la suite" [ref=e305] [cursor=pointer]
+              - generic [ref=e307]:
+                - generic [ref=e308]:
+                  - img "Google" [ref=e310]
+                  - img "Marwan Louahlia profile picture" [ref=e312]
+                  - generic [ref=e313]:
+                    - generic [ref=e314]: Marwan Louahlia
+                    - generic [ref=e315]: 25 Mars 2026
+                - generic [ref=e316]:
+                  - img "Google star 1" [ref=e317]
+                  - img "Google star 2" [ref=e318]
+                  - img "Google star 3" [ref=e319]
+                  - img "Google star 4" [ref=e320]
+                  - img "Google star 5" [ref=e321]
+                - generic [ref=e323]:
+                  - text: Génial !!
+                  - text: Après des années à enchaîner les mauvais coiffeurs et à mal soigner mes cheveux bouclés, Yannick m’a sauvé 🥹
+                  - text: La prestation était excellente, Yannick, au petits soins, prend le temps d’écouter et de conseiller sur les produits à utiliser et sur la manière de prendre soin des cheveux. Le tout avec un tarif abordable pour les étudiants.
+                  - text: Je recommande énormément pour les personnes qui cherchent à comprendre leurs cheveux et qui veulent une coupe qui les correspond.
+                - button "Lire la suite" [ref=e325] [cursor=pointer]
+              - generic [ref=e327]:
+                - generic [ref=e328]:
+                  - img "Google" [ref=e330]
+                  - img "Quentin Osmane profile picture" [ref=e332]
+                  - generic [ref=e333]:
+                    - generic [ref=e334]: Quentin Osmane
+                    - generic [ref=e335]: 20 Mars 2026
+                - generic [ref=e336]:
+                  - img "Google star 1" [ref=e337]
+                  - img "Google star 2" [ref=e338]
+                  - img "Google star 3" [ref=e339]
+                  - img "Google star 4" [ref=e340]
+                  - img "Google star 5" [ref=e341]
+                - generic [ref=e343]:
+                  - text: Cest la 2eme fois que je me rends chez ce coiffeur, je ne sais pas quoi dire mis a part qu’il n’y a pas de meilleur coiffeur pour les cheveux bouclés sur Paris.
+                  - text: Cheveux courts ou longs, homme ou femme, le nom expert boucle n’est pas une exagération !
+                  - text: Sans parler de l’accueil et de la sympathie de Yannick
+                - button "Lire la suite" [ref=e345] [cursor=pointer]
+              - generic [ref=e347]:
+                - generic [ref=e348]:
+                  - img "Google" [ref=e350]
+                  - img "Céleste Gandomi profile picture" [ref=e352]
+                  - generic [ref=e353]:
+                    - generic [ref=e354]: Céleste Gandomi
+                    - generic [ref=e355]: 18 Mars 2026
+                - generic [ref=e356]:
+                  - img "Google star 1" [ref=e357]
+                  - img "Google star 2" [ref=e358]
+                  - img "Google star 3" [ref=e359]
+                  - img "Google star 4" [ref=e360]
+                  - img "Google star 5" [ref=e361]
+                - generic [ref=e363]: Super travail, comme d'habitude ;) je recommande à 100%
+              - generic [ref=e365]:
+                - generic [ref=e366]:
+                  - img "Google" [ref=e368]
+                  - img "Jo profile picture" [ref=e370]
+                  - generic [ref=e371]:
+                    - generic [ref=e372]: Jo
+                    - generic [ref=e373]: 17 Mars 2026
+                - generic [ref=e374]:
+                  - img "Google star 1" [ref=e375]
+                  - img "Google star 2" [ref=e376]
+                  - img "Google star 3" [ref=e377]
+                  - img "Google star 4" [ref=e378]
+                  - img "Google star 5" [ref=e379]
+                - generic [ref=e381]:
+                  - text: J’ai testé énormément de coiffeurs spécialistes de la boucle à Paris, tous très doués, mais Yannick reste mon préféré !
+                  - text: "Le salon est top, on s’y sent très bien accueilli. Yannick est à l’écoute : il prend le temps de vous observer et sait déterminer la coupe qui vous ira le mieux, tout en respectant vos envies."
+                  - text: Préparez-vous à une pluie de compliments sur vos cheveux en sortant de là ! 😏
+                  - text: Bref, je recommande.
+                  - text: Merci Yannick !
+                - button "Lire la suite" [ref=e383] [cursor=pointer]
+              - generic [ref=e385]:
+                - generic [ref=e386]:
+                  - img "Google" [ref=e388]
+                  - img "Veronique profile picture" [ref=e390]
+                  - generic [ref=e391]:
+                    - generic [ref=e392]: Veronique
+                    - generic [ref=e393]: 5 Mars 2026
+                - generic [ref=e394]:
+                  - img "Google star 1" [ref=e395]
+                  - img "Google star 2" [ref=e396]
+                  - img "Google star 3" [ref=e397]
+                  - img "Google star 4" [ref=e398]
+                  - img "Google star 5" [ref=e399]
+                - generic [ref=e401]: Super expérience au sein du salon de Levallois. Toute l’équipe m’a chouchouté ! Bravo Chahinaze et Karine. Je recommande
+                - button "Lire la suite" [ref=e403] [cursor=pointer]
+        - generic [ref=e410]:
+          - img "Salon de coiffure" [ref=e412]
+          - generic [ref=e414]:
+            - generic [ref=e415]: Vous serez accueilli au sein d'un lieu de coworking situé au 50 rue de la Chaussée d' Antin Paris 75009 dans une atmosphère conviviale et détendue. Sur rendez-vous uniquement afin de vous recevoir dans les meilleures conditions possible.
+            - link "Voir le salon de coworking" [ref=e417] [cursor=pointer]:
+              - /url: ""
+        - generic [ref=e419]:
+          - paragraph [ref=e424]:
+            - text: Copyright © 2024
+            - text: Propulsé par
+            - link "Tenorweb" [ref=e425] [cursor=pointer]:
+              - /url: https://www.tenorweb.com
+          - generic [ref=e427]:
+            - generic [ref=e430]: Horaire
+            - generic [ref=e433]:
+              - text: Mardi | Mercredi 12h - 20h
+              - text: Vendredi | 12h - 20h
+              - text: Dimanche | 12h - 20h
+          - generic [ref=e435]:
+            - generic [ref=e438]: Téléphone
+            - link "07 81 31 30 94" [ref=e442] [cursor=pointer]:
+              - /url: tel:+33781313094
+          - generic [ref=e444]:
+            - generic [ref=e447]: Diagnostic / Email
+            - generic [ref=e450]: contact@expert-boucles.com expertboucles.formation@gmail.com
+          - generic [ref=e452]:
+            - generic [ref=e455]: Suivez-nous
+            - link "Instagram" [ref=e460] [cursor=pointer]:
+              - /url: https://www.instagram.com/expert_boucles/
+              - generic [ref=e461]: Instagram
+              - generic [ref=e462]: 
+        - navigation "Menu" [ref=e469]:
+          - list [ref=e470]:
+            - listitem [ref=e471]:
+              - link "Mon compte" [ref=e472] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mon-compte
+            - listitem [ref=e473]:
+              - link "Mentions Légales" [ref=e474] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mentions-legales
+            - listitem [ref=e475]:
+              - link "Remboursements et Annulation" [ref=e476] [cursor=pointer]:
+                - /url: https://expert-boucles.com/remboursement-annulation
+            - listitem [ref=e477]:
+              - link "CGV" [ref=e478] [cursor=pointer]:
+                - /url: https://expert-boucles.com/cgv
+  - text: 
+  - generic [ref=e479]: desktop
+  - status [ref=e480]

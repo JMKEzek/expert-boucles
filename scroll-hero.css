@@ -1,0 +1,267 @@
+/**
+ * scroll-hero.css
+ *
+ * Styles pour le composant ScrollHero
+ * Optimisé pour performances et GPU acceleration
+ */
+
+/* ============================================================================
+   HERO SECTION — Image qui se réduit au scroll
+   ========================================================================== */
+
+.scroll-hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  /* Empêcher les reflows lors de la réduction */
+  contain: layout style paint;
+}
+
+.scroll-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  /* GPU acceleration */
+  will-change: height, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+
+  /* Smooth transition sur la hauteur et opacité */
+  /* (si animation discrète via JS, on peut ajouter une transition) */
+  /* transition: height 0.1s ease-out, opacity 0.1s ease-out; */
+}
+
+/* État de réduction */
+.scroll-hero-image.reducing {
+  /* Classes appliquées dynamiquement par JS */
+  /* height: calc(var(--height-scale) * 100%); */
+  /* opacity: var(--height-scale); */
+}
+
+/* ============================================================================
+   CONTENT SECTION — Contenu qui remonte
+   ========================================================================== */
+
+.scroll-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+
+  /* Pour éviter que le contenu "flash" au chargement */
+  min-height: 100vh;
+
+  /* GPU acceleration */
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* Smooth transitions via JS/RAF */
+  /* transform: translateY(var(--translate-y)); */
+}
+
+/* ============================================================================
+   RESPONSIVE — Désactiver l'effet sur mobile
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .scroll-hero-container {
+    height: 60vh; /* Réduire la hauteur du hero sur mobile */
+  }
+
+  .scroll-hero-image {
+    will-change: auto; /* Réduire les optimisations sur mobile */
+  }
+
+  .scroll-hero-content {
+    /* Pas d'animation de translateY sur mobile */
+    transform: none !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .scroll-hero-container {
+    height: 50vh;
+  }
+}
+
+/* ============================================================================
+   ALTERNATIVE 1 : Sticky Hero avec réduction
+   ========================================================================== */
+
+.scroll-hero-sticky-variant {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  z-index: 5;
+}
+
+.scroll-hero-sticky-variant img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+/* ============================================================================
+   ALTERNATIVE 2 : Parallax classique (sans réduction)
+   ========================================================================== */
+
+.scroll-hero-parallax-variant {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ============================================================================
+   SMOOTHING TWEAKS — Optimisations avancées
+   ========================================================================== */
+
+/* Aide à réduire les jank sur le scroll */
+.scroll-hero-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Force GPU rendering */
+.scroll-hero-gpu {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Accent pour perte de motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hero-image,
+  .scroll-hero-content {
+    will-change: auto;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================================
+   UTILITIES — Classe d'aide
+   ========================================================================== */
+
+.scroll-hero-debug {
+  /* Classe pour déboguer les positions et tailles */
+  position: relative;
+}
+
+.scroll-hero-debug::before {
+  content: 'HERO DEBUG MODE';
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+  z-index: 9999;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* ============================================================================
+   DARK MODE — Support optionnel
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  .scroll-hero-content {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+  }
+}
+
+/* ============================================================================
+   ANIMATIONS — Optionnelles
+   ========================================================================== */
+
+/* Fade-in du contenu au scroll */
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-hero-content-fade {
+  animation: contentFadeIn 0.6s ease-out forwards;
+}
+
+/* Zoom light du hero au chargement */
+@keyframes heroZoomIn {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scroll-hero-image-initial {
+  animation: heroZoomIn 0.8s ease-out forwards;
+}
+
+/* ============================================================================
+   ACCESSIBILITY — Inclusive design
+   ========================================================================== */
+
+/* Skip to content link */
+.scroll-hero-skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.scroll-hero-skip:focus {
+  top: 0;
+}
+
+/* Focus styles pour la navigation */
+.scroll-hero-content a:focus-visible,
+.scroll-hero-content button:focus-visible {
+  outline: 2px solid #c9a96e; /* Couleur or du design system */
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  .scroll-hero-container {
+    height: auto;
+    page-break-after: always;
+  }
+
+  .scroll-hero-image {
+    max-height: 400px;
+  }
+
+  .scroll-hero-content {
+    page-break-inside: avoid;
+  }
+}

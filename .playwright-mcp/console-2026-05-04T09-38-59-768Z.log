@@ -1,0 +1,97 @@
+[    8457ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[    8714ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[   18350ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[  412906ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  413278ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  413876ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/a49c04495f8a4a6d.webpack.hot-update.json:0
+[  414435ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  414540ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[  418171ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  418338ms] [LOG] [Fast Refresh] done in 167ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  418365ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  418582ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/9f87ffcad0a89d91.webpack.hot-update.json:0
+[  418920ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  418939ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[  418978ms] [WARNING] Image with src "https://via.placeholder.com/400x400?text=" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  885922ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  886251ms] [LOG] [Fast Refresh] done in 329ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  886273ms] [LOG] [Fast Refresh] done in 352ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  886279ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  886571ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/189cd879031257b1.webpack.hot-update.json:0
+[  887102ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  887183ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[  887191ms] [WARNING] Image with src "https://via.placeholder.com/400x400?text=" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1055032ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1055353ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1055433ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1055750ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/d85ff4bd456ceb6b.webpack.hot-update.json:0
+[ 1056970ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/?_rsc=r3yhw:0
+[ 1057035ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/:0
+[ 1057323ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[ 1057358ms] Error: Cannot find module './682.js'
+Require stack:
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\webpack-runtime.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\pages\_document.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\require.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\load-components.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\build\utils.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)
+    at <unknown> (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)
+    at Module._load (node:internal/modules/cjs/loader:1242:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+    at mod.require (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\webpack-runtime.js:198:28)
+    at <unknown> (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\webpack-runtime.js:162:22)
+    at <unknown> (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\pages\_document.js:1:335)
+    at Object.<anonymous> (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\.next\server\pages\_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1812:14)
+    at Object..js (node:internal/modules/cjs/loader:1943:10)
+    at Module.load (node:internal/modules/cjs/loader:1533:32)
+    at Module._load (node:internal/modules/cjs/loader:1335:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+    at mod.require (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\require.js:109:84)
+    at <unknown> (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\load-components.js:72:65)
+    at async loadComponentsImpl (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (file://C:\Users\jujum\Documents\Expert_boucle\expert-boucles\node_modules\next\dist\server\next-server.js:710:36)
+[ 1057358ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:45
+[ 1334077ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/45e997fe650a1ab8.webpack.hot-update.json:0
+[ 1334077ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[ 1334397ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1334430ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[ 1334469ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/favicon.ico:0
+[ 1334487ms] [WARNING] Image with src "https://via.placeholder.com/400x400?text=" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1566099ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1566501ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1566743ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/d841a4a16e148987.webpack.hot-update.json:0
+[ 1567141ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1567183ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[ 1567251ms] [WARNING] Image with src "https://via.placeholder.com/400x400?text=" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1644318ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1644623ms] [LOG] [Fast Refresh] done in 305ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1644659ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1644914ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3007/_next/static/webpack/da3af5e6a862542c.webpack.hot-update.json:0
+[ 1645384ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1645411ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3007/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
+[ 1645471ms] [WARNING] Image with src "https://via.placeholder.com/400x400?text=" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[ 1649746ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1649908ms] [LOG] [Fast Refresh] done in 162ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1710282ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1710501ms] [LOG] [Fast Refresh] done in 219ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1771478ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1771739ms] [LOG] [Fast Refresh] done in 262ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43

@@ -1,0 +1,148 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - banner [ref=e6]:
+          - banner [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e12]:
+                - link "expert-boucles.com" [ref=e17] [cursor=pointer]:
+                  - /url: https://expert-boucles.com
+                  - img "expert-boucles.com" [ref=e18]
+                - generic [ref=e22]:
+                  - navigation "Menu" [ref=e23]:
+                    - list [ref=e24]:
+                      - listitem [ref=e25]:
+                        - link "Accueil" [ref=e26] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/
+                      - listitem [ref=e27]:
+                        - link "À propos" [ref=e28] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/qui-suis-je
+                      - listitem [ref=e29]:
+                        - link "Prestations et Tarifs" [ref=e30] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/prestations-et-tarifs-cheveux-boucles
+                      - listitem [ref=e31]:
+                        - link "Réalisations" [ref=e32] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/realisations
+                      - listitem [ref=e33]:
+                        - link "Contact" [ref=e34] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/contact
+                  - text:  
+              - generic [ref=e38]:
+                - navigation "Menu" [ref=e39]:
+                  - list [ref=e40]:
+                    - listitem [ref=e41]:
+                      - link "Prendre rendez-vous" [ref=e42] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/prendre-rendez-vous
+                        - generic [ref=e43]: 
+                        - generic [ref=e44]: Prendre rendez-vous
+                    - listitem [ref=e45]:
+                      - link "Mon compte" [ref=e46] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/mon-compte
+                        - generic [ref=e47]: 
+                        - generic [ref=e48]: Mon compte
+                - text:    
+      - main [ref=e53]:
+        - article [ref=e57]:
+          - generic [ref=e71]:
+            - heading "Conditions Générales de Vente - Expert Boucles" [level=1] [ref=e74]
+            - generic [ref=e76]:
+              - heading "1. Informations légales" [level=2] [ref=e77]
+              - paragraph [ref=e78]:
+                - text: Le présent site est édité par Yannick, entrepreneur individuel, sous le nom Expert Boucles
+                - text: "Email : contact@expert-boucles.com"
+                - text: "SIRET : 93012505900016"
+                - text: "Hébergeur :"
+                - text: Adresse :60 rue Francois 1er 75008 Paris
+              - heading "2. Réservations des prestations" [level=2] [ref=e79]
+              - paragraph [ref=e80]:
+                - text: Les prestations proposées sur le site sont accessibles uniquement sur rendez-vous, via le site www.expertboucles.com.
+                - text: • L’âge minimum requis pour réserver est de 14 ans.
+                - text: • Un diagnostic personnalisé ainsi qu’un shampooing sont systématiquement inclus dans chaque prestation.
+                - text: • La réservation est considérée comme confirmée uniquement après paiement en ligne.
+              - heading "3 – Modification d’un rendez-vous" [level=2] [ref=e81]
+              - paragraph [ref=e82]: Les demandes de modification sont possibles jusqu’à 48 heures avant la date du rendez-vous.
+              - paragraph [ref=e83]: "Procédure:"
+              - paragraph [ref=e84]:
+                - text: 1. Envoyer un email à contact@expert-boucles.com
+                - text: 2. Indiquer vos coordonnées, la date et l’heure initialement réservées, ainsi que vos nouvelles disponibilités.
+              - paragraph [ref=e85]: Une confirmation sera envoyée par email selon les créneaux restants disponibles.
+              - heading "4 – Annulation et remboursement" [level=2] [ref=e86]
+              - paragraph [ref=e87]: Vous pouvez annuler votre rendez-vous dans un délai de 72 heures suivant la prise deréservation.
+              - paragraph [ref=e88]:
+                - text: "Procédure:"
+                - text: 1. Envoyer un email à contact@expert-boucles.com
+                - text: 2. Indiquer vos coordonnées, la date du rendez-vous concerné et le motif de votreannulation.
+              - paragraph [ref=e89]:
+                - text: "Conditions:"
+                - text: Le remboursement est effectué sous 7 jours, via le même mode de paiement utilisé.
+                - text: Les frais de transaction restent à la charge du client.
+                - text: Aucun remboursement ne sera possible une fois la prestation réalisée.
+              - heading "5 – Retard et absence" [level=2] [ref=e90]
+              - paragraph [ref=e91]: • En cas de retard supérieur à 15 minutes, la prestation pourra être écourtée ou annulée sans remboursement.• En cas de non-présentation sans avertissement, la prestation est considérée comme due et ne pourra être ni reportée ni remboursée.
+              - heading "6 – Tarifs et paiement" [level=2] [ref=e92]
+              - paragraph [ref=e93]:
+                - text: Les tarifs sont indiqués en euros TTC.
+                - text: Le paiement est effectué de manière sécurisée via la passerelle intégrée au site.
+                - text: Aucun paiement en espèces n’est accepté pour la réservation en ligne.1
+              - heading "7 – Propriété intellectuelle" [level=2] [ref=e94]
+              - paragraph [ref=e95]:
+                - text: Tous les contenus présents sur le site (textes, images, visuels, logo Expert Boucles…) sont protégés par la législation sur la propriété intellectuelle.
+                - text: Toute reproduction, représentation ou diffusion, même partielle, est interdite sans autorisation écrite préalable.
+              - heading "8 – Droit applicable et litiges" [level=2] [ref=e96]
+              - paragraph [ref=e97]:
+                - text: Les présentes conditions sont soumises au droit français.
+                - text: En cas de litige, une solution amiable sera privilégiée.
+                - text: À défaut, les tribunaux compétents seront ceux du ressort du siège de l’entreprise.
+              - paragraph [ref=e98]
+      - contentinfo [ref=e99]:
+        - generic [ref=e110]:
+          - img "Salon de coiffure" [ref=e112]
+          - generic [ref=e114]:
+            - generic [ref=e115]: Vous serez accueilli au sein d'un lieu de coworking situé au 50 rue de la Chaussée d' Antin Paris 75009 dans une atmosphère conviviale et détendue. Sur rendez-vous uniquement afin de vous recevoir dans les meilleures conditions possible.
+            - link "Voir le salon de coworking" [ref=e117] [cursor=pointer]:
+              - /url: ""
+        - generic [ref=e119]:
+          - paragraph [ref=e124]:
+            - text: Copyright © 2024
+            - text: Propulsé par
+            - link "Tenorweb" [ref=e125] [cursor=pointer]:
+              - /url: https://www.tenorweb.com
+          - generic [ref=e127]:
+            - generic [ref=e130]: Horaire
+            - generic [ref=e133]:
+              - text: Mardi | Mercredi 12h - 20h
+              - text: Vendredi | 12h - 20h
+              - text: Dimanche | 12h - 20h
+          - generic [ref=e135]:
+            - generic [ref=e138]: Téléphone
+            - link "07 81 31 30 94" [ref=e142] [cursor=pointer]:
+              - /url: tel:+33781313094
+          - generic [ref=e144]:
+            - generic [ref=e147]: Diagnostic / Email
+            - generic [ref=e150]: contact@expert-boucles.com expertboucles.formation@gmail.com
+          - generic [ref=e152]:
+            - generic [ref=e155]: Suivez-nous
+            - link "Instagram" [ref=e160] [cursor=pointer]:
+              - /url: https://www.instagram.com/expert_boucles/
+              - generic [ref=e161]: Instagram
+              - generic [ref=e162]: 
+        - navigation "Menu" [ref=e169]:
+          - list [ref=e170]:
+            - listitem [ref=e171]:
+              - link "Mon compte" [ref=e172] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mon-compte
+            - listitem [ref=e173]:
+              - link "Mentions Légales" [ref=e174] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mentions-legales
+            - listitem [ref=e175]:
+              - link "Remboursements et Annulation" [ref=e176] [cursor=pointer]:
+                - /url: https://expert-boucles.com/remboursement-annulation
+            - listitem [ref=e177]:
+              - link "CGV" [ref=e178] [cursor=pointer]:
+                - /url: https://expert-boucles.com/cgv
+  - text: 
+  - generic [ref=e179]: desktop
+  - status [ref=e180]

@@ -1,0 +1,162 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - banner [ref=e6]:
+          - banner [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e12]:
+                - link "expert-boucles.com" [ref=e17] [cursor=pointer]:
+                  - /url: https://expert-boucles.com
+                  - img "expert-boucles.com" [ref=e18]
+                - generic [ref=e22]:
+                  - navigation "Menu" [ref=e23]:
+                    - list [ref=e24]:
+                      - listitem [ref=e25]:
+                        - link "Accueil" [ref=e26] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/
+                      - listitem [ref=e27]:
+                        - link "À propos" [ref=e28] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/qui-suis-je
+                      - listitem [ref=e29]:
+                        - link "Prestations et Tarifs" [ref=e30] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/prestations-et-tarifs-cheveux-boucles
+                      - listitem [ref=e31]:
+                        - link "Réalisations" [ref=e32] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/realisations
+                      - listitem [ref=e33]:
+                        - link "Contact" [ref=e34] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/contact
+                  - text:  
+              - generic [ref=e38]:
+                - navigation "Menu" [ref=e39]:
+                  - list [ref=e40]:
+                    - listitem [ref=e41]:
+                      - link "Prendre rendez-vous" [ref=e42] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/prendre-rendez-vous
+                        - generic [ref=e43]: 
+                        - generic [ref=e44]: Prendre rendez-vous
+                    - listitem [ref=e45]:
+                      - link "Mon compte" [ref=e46] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/mon-compte
+                        - generic [ref=e47]: 
+                        - generic [ref=e48]: Mon compte
+                - text:    
+      - main [ref=e53]:
+        - article [ref=e57]:
+          - generic [ref=e59]:
+            - generic [ref=e63]:
+              - heading "À propos de" [level=1] [ref=e70]
+              - heading "Yannick" [level=3] [ref=e73]:
+                - generic [ref=e75]: Yannick
+              - heading "Coiffeur, Expert en cheveux bouclés" [level=3] [ref=e78]:
+                - text: Coiffeur, Expert
+                - text: en cheveux bouclés
+            - generic [ref=e82]:
+              - generic [ref=e84]:
+                - generic [ref=e86]:
+                  - heading "Mon parcours" [level=3] [ref=e89]
+                  - paragraph [ref=e92]: "Depuis toujours, la coiffure est plus qu’un métier : c’est une vocation. Formé dans les plus grandes maisons…dont JEAN LOUIS DAVID. J’ai appris l’exigence, la rigueur et l’élégance du geste. Ce parcours m’a permis d’affiner mon oeil, de maîtriser les fondamentaux, puis de créer ma propre vision. Aujourd’hui, chaque prestation est le fruit de cette double richesse ; un héritage classique allié à une liberté artistique. Une expertise que j’ai nourril’international, au contact de culture et de"
+                - generic [ref=e94]:
+                  - heading "Ma méthode de travail" [level=3] [ref=e97]
+                  - paragraph [ref=e100]:
+                    - text: Avant de couper, j’écoute.
+                    - text: Ma méthode commence toujours par un
+                    - text: "diagnostic complet : habitudes, fréquence de"
+                    - text: lavage, historique capillaire, besoins
+                    - text: spécifiques du cuir chevelu, nature des
+                    - text: produits utilisés..
+                    - text: Je m’appuie sur une analyse fine pour
+                    - text: comprendre votre boucle dans toute sa
+                    - text: singularité. Car aucune routine ne peut être
+                    - text: universelle – chaque texture demande une
+                    - text: lecture personnalisée.
+                    - text: Mon approche repose sur l’ajustement, la
+                    - text: précision et la bienveillance. Chaque détail
+                    - text: compte pour sublimer vos boucles..
+                    - text: durablement.
+              - generic [ref=e102]:
+                - generic [ref=e104]:
+                  - heading "Ma Passion" [level=3] [ref=e107]
+                  - paragraph [ref=e110]:
+                    - text: Ce qui me passionne, c’est la transformation.
+                    - text: Voir une cliente se réapproprier sa texture,
+                    - text: apprendre à aimer ce que d’autres lui ont
+                    - text: appris à cacher – c’est ça, ma motivation
+                    - text: profonde.
+                    - text: Les cheveux bouclés sont vivants,
+                    - text: changeants, puissants. Ils racontent quelque
+                    - text: chose. Et mon rôle, c’est de les révéler avec
+                    - text: respect, finesse, et style.
+                    - text: Plus qu’un résultat, e cherche une émotion.
+                    - text: Une coupe réussie, c’est une posture qui
+                    - text: change, un regard qui s’allume.
+                - generic [ref=e112]:
+                  - heading "Ma signature" [level=3] [ref=e115]
+                  - paragraph [ref=e118]:
+                    - text: Ma signature, c’est l’art du sur-mesure.
+                    - text: Chaque coupe, chaque soin, chaque conseil
+                    - text: est pensé pour vous, dans votre réalité, votre
+                    - text: rythme de vie, votre énergie.
+                    - text: Grâce à une maîtrise pointue des techniques
+                    - text: curly et à une sensibilité esthétique affirmée,
+                    - text: e construis des coiffures vivantes,
+                    - text: harmonieuses. touiours fidèles à votre
+                    - text: identité.
+                    - text: C’est ce mélange entre rigueur technique et
+                    - text: intuition artistique qui définit mon travail.
+                    - text: C’est ce qui rend chaque création unique.
+              - link "Me contacter" [ref=e126] [cursor=pointer]:
+                - /url: https://expert-boucles.com/contact
+                - generic [ref=e128]: Me contacter
+      - contentinfo [ref=e141]:
+        - generic [ref=e152]:
+          - img "Salon de coiffure" [ref=e154]
+          - generic [ref=e156]:
+            - generic [ref=e157]: Vous serez accueilli au sein d'un lieu de coworking situé au 50 rue de la Chaussée d' Antin Paris 75009 dans une atmosphère conviviale et détendue. Sur rendez-vous uniquement afin de vous recevoir dans les meilleures conditions possible.
+            - link "Voir le salon de coworking" [ref=e159] [cursor=pointer]:
+              - /url: ""
+        - generic [ref=e161]:
+          - paragraph [ref=e166]:
+            - text: Copyright © 2024
+            - text: Propulsé par
+            - link "Tenorweb" [ref=e167] [cursor=pointer]:
+              - /url: https://www.tenorweb.com
+          - generic [ref=e169]:
+            - generic [ref=e172]: Horaire
+            - generic [ref=e175]:
+              - text: Mardi | Mercredi 12h - 20h
+              - text: Vendredi | 12h - 20h
+              - text: Dimanche | 12h - 20h
+          - generic [ref=e177]:
+            - generic [ref=e180]: Téléphone
+            - link "07 81 31 30 94" [ref=e184] [cursor=pointer]:
+              - /url: tel:+33781313094
+          - generic [ref=e186]:
+            - generic [ref=e189]: Diagnostic / Email
+            - generic [ref=e192]: contact@expert-boucles.com expertboucles.formation@gmail.com
+          - generic [ref=e194]:
+            - generic [ref=e197]: Suivez-nous
+            - link "Instagram" [ref=e202] [cursor=pointer]:
+              - /url: https://www.instagram.com/expert_boucles/
+              - generic [ref=e203]: Instagram
+              - generic [ref=e204]: 
+        - navigation "Menu" [ref=e211]:
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - link "Mon compte" [ref=e214] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mon-compte
+            - listitem [ref=e215]:
+              - link "Mentions Légales" [ref=e216] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mentions-legales
+            - listitem [ref=e217]:
+              - link "Remboursements et Annulation" [ref=e218] [cursor=pointer]:
+                - /url: https://expert-boucles.com/remboursement-annulation
+            - listitem [ref=e219]:
+              - link "CGV" [ref=e220] [cursor=pointer]:
+                - /url: https://expert-boucles.com/cgv
+  - text: 
+  - generic [ref=e221]: desktop
+  - status [ref=e222]

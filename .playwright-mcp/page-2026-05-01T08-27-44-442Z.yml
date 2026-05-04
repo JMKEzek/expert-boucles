@@ -1,0 +1,111 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - banner [ref=e6]:
+          - banner [ref=e7]:
+            - generic [ref=e8]:
+              - generic [ref=e12]:
+                - link "expert-boucles.com" [ref=e17] [cursor=pointer]:
+                  - /url: https://expert-boucles.com
+                  - img "expert-boucles.com" [ref=e18]
+                - generic [ref=e22]:
+                  - navigation "Menu" [ref=e23]:
+                    - list [ref=e24]:
+                      - listitem [ref=e25]:
+                        - link "Accueil" [ref=e26] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/
+                      - listitem [ref=e27]:
+                        - link "À propos" [ref=e28] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/qui-suis-je
+                      - listitem [ref=e29]:
+                        - link "Prestations et Tarifs" [ref=e30] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/prestations-et-tarifs-cheveux-boucles
+                      - listitem [ref=e31]:
+                        - link "Réalisations" [ref=e32] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/realisations
+                      - listitem [ref=e33]:
+                        - link "Contact" [ref=e34] [cursor=pointer]:
+                          - /url: https://expert-boucles.com/contact
+                  - text:  
+              - generic [ref=e38]:
+                - navigation "Menu" [ref=e39]:
+                  - list [ref=e40]:
+                    - listitem [ref=e41]:
+                      - link "Prendre rendez-vous" [ref=e42] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/prendre-rendez-vous
+                        - generic [ref=e43]: 
+                        - generic [ref=e44]: Prendre rendez-vous
+                    - listitem [ref=e45]:
+                      - link "Mon compte" [ref=e46] [cursor=pointer]:
+                        - /url: https://expert-boucles.com/mon-compte
+                        - generic [ref=e47]: 
+                        - generic [ref=e48]: Mon compte
+                - text:    
+      - main [ref=e53]:
+        - article [ref=e57]:
+          - generic [ref=e59]:
+            - generic [ref=e63]:
+              - heading "Réalisations" [level=1] [ref=e66]
+              - heading "Cheveux bouclés" [level=2] [ref=e69]
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - link "expert_boucles's profile picture" [ref=e90] [cursor=pointer]:
+                  - /url: https://instagram.com/expert_boucles
+                  - img "expert_boucles's profile picture" [ref=e91]
+                - link "@expert_boucles" [ref=e94] [cursor=pointer]:
+                  - /url: https://instagram.com/expert_boucles
+              - link "Follow expert_boucles on Instagram" [ref=e97] [cursor=pointer]:
+                - /url: https://instagram.com/expert_boucles
+                - button "Follow expert_boucles on Instagram" [ref=e98]: Follow on Instagram
+      - contentinfo [ref=e122]:
+        - generic [ref=e133]:
+          - img "Salon de coiffure" [ref=e135]
+          - generic [ref=e137]:
+            - generic [ref=e138]: Vous serez accueilli au sein d'un lieu de coworking situé au 50 rue de la Chaussée d' Antin Paris 75009 dans une atmosphère conviviale et détendue. Sur rendez-vous uniquement afin de vous recevoir dans les meilleures conditions possible.
+            - link "Voir le salon de coworking" [ref=e140] [cursor=pointer]:
+              - /url: ""
+        - generic [ref=e142]:
+          - paragraph [ref=e147]:
+            - text: Copyright © 2024
+            - text: Propulsé par
+            - link "Tenorweb" [ref=e148] [cursor=pointer]:
+              - /url: https://www.tenorweb.com
+          - generic [ref=e150]:
+            - generic [ref=e153]: Horaire
+            - generic [ref=e156]:
+              - text: Mardi | Mercredi 12h - 20h
+              - text: Vendredi | 12h - 20h
+              - text: Dimanche | 12h - 20h
+          - generic [ref=e158]:
+            - generic [ref=e161]: Téléphone
+            - link "07 81 31 30 94" [ref=e165] [cursor=pointer]:
+              - /url: tel:+33781313094
+          - generic [ref=e167]:
+            - generic [ref=e170]: Diagnostic / Email
+            - generic [ref=e173]: contact@expert-boucles.com expertboucles.formation@gmail.com
+          - generic [ref=e175]:
+            - generic [ref=e178]: Suivez-nous
+            - link "Instagram" [ref=e183] [cursor=pointer]:
+              - /url: https://www.instagram.com/expert_boucles/
+              - generic [ref=e184]: Instagram
+              - generic [ref=e185]: 
+        - navigation "Menu" [ref=e192]:
+          - list [ref=e193]:
+            - listitem [ref=e194]:
+              - link "Mon compte" [ref=e195] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mon-compte
+            - listitem [ref=e196]:
+              - link "Mentions Légales" [ref=e197] [cursor=pointer]:
+                - /url: https://expert-boucles.com/mentions-legales
+            - listitem [ref=e198]:
+              - link "Remboursements et Annulation" [ref=e199] [cursor=pointer]:
+                - /url: https://expert-boucles.com/remboursement-annulation
+            - listitem [ref=e200]:
+              - link "CGV" [ref=e201] [cursor=pointer]:
+                - /url: https://expert-boucles.com/cgv
+  - text: 
+  - generic [ref=e202]: desktop
+  - status [ref=e203]

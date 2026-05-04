@@ -1,0 +1,277 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - generic [ref=e7]:
+      - banner "Global Navigation Menu" [ref=e8]:
+        - generic [ref=e9]:
+          - generic [ref=e10]:
+            - button "Open menu" [ref=e12] [cursor=pointer]:
+              - img [ref=e13]
+            - link "Homepage (g then d)" [ref=e15] [cursor=pointer]:
+              - /url: /
+              - img [ref=e16]
+          - generic [ref=e18]:
+            - navigation "Breadcrumbs" [ref=e19]:
+              - list [ref=e20]:
+                - listitem [ref=e21]:
+                  - link "JMKEzek" [ref=e22] [cursor=pointer]:
+                    - /url: /JMKEzek
+                    - generic [ref=e23]: JMKEzek
+                - listitem [ref=e24]:
+                  - link "expert-boucles" [ref=e25] [cursor=pointer]:
+                    - /url: /JMKEzek/expert-boucles
+                    - generic [ref=e26]: expert-boucles
+            - button "Search or jump to…" [ref=e29] [cursor=pointer]:
+              - generic [ref=e30]:
+                - generic:
+                  - img
+                - generic [ref=e31]:
+                  - generic:
+                    - text: Type
+                    - generic: /
+                    - text: to search
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - generic [ref=e36]:
+                - link "Chat with Copilot" [ref=e38] [cursor=pointer]:
+                  - /url: /copilot
+                  - img [ref=e39]
+                - button "Open Copilot…" [ref=e43] [cursor=pointer]:
+                  - generic:
+                    - img
+              - button "Create new..." [ref=e45] [cursor=pointer]:
+                - generic [ref=e46]:
+                  - generic:
+                    - img
+                - generic:
+                  - img
+              - generic [ref=e47]:
+                - link "All issues" [ref=e48] [cursor=pointer]:
+                  - /url: /issues
+                  - img [ref=e49]
+                - link "All pull requests" [ref=e52] [cursor=pointer]:
+                  - /url: /pulls
+                  - img [ref=e53]
+                - link "All repositories" [ref=e55] [cursor=pointer]:
+                  - /url: /repos
+                  - img [ref=e56]
+            - link "You have no unread notifications (g then n)" [ref=e58] [cursor=pointer]:
+              - /url: /notifications
+              - img [ref=e59]
+            - button "Open user navigation menu" [ref=e62] [cursor=pointer]:
+              - img "User avatar" [ref=e63]
+        - heading "Repository navigation" [level=2] [ref=e64]
+        - navigation "Repository" [ref=e65]:
+          - list [ref=e66]:
+            - listitem [ref=e67]:
+              - link "Code" [ref=e68] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles
+                - img [ref=e70]
+                - generic [ref=e72]: Code
+            - listitem [ref=e73]:
+              - link "Issues" [ref=e74] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/issues
+                - img [ref=e76]
+                - generic [ref=e79]: Issues
+            - listitem [ref=e80]:
+              - link "Pull requests" [ref=e81] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/pulls
+                - img [ref=e83]
+                - generic [ref=e85]: Pull requests
+            - listitem [ref=e86]:
+              - link "Agents" [ref=e87] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/agents?author=JMKEzek
+                - img [ref=e89]
+                - generic [ref=e92]: Agents
+            - listitem [ref=e93]:
+              - link "Actions" [ref=e94] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/actions
+                - img [ref=e96]
+                - generic [ref=e98]: Actions
+            - listitem [ref=e99]:
+              - link "Projects" [ref=e100] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/projects
+                - img [ref=e102]
+                - generic [ref=e104]: Projects
+            - listitem [ref=e105]:
+              - link "Wiki" [ref=e106] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/wiki
+                - img [ref=e108]
+                - generic [ref=e110]: Wiki
+            - listitem [ref=e111]:
+              - link "Security and quality" [ref=e112] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/security
+                - img [ref=e114]
+                - generic [ref=e116]: Security and quality
+            - listitem [ref=e117]:
+              - link "Insights" [ref=e118] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/pulse
+                - img [ref=e120]
+                - generic [ref=e122]: Insights
+            - listitem [ref=e123]:
+              - link "Settings" [ref=e124] [cursor=pointer]:
+                - /url: /JMKEzek/expert-boucles/settings
+                - img [ref=e126]
+                - generic [ref=e128]: Settings
+      - region "Important update" [ref=e130]:
+        - img [ref=e132]
+        - generic [ref=e135]:
+          - heading "Important update" [level=2] [ref=e137]
+          - generic [ref=e139]:
+            - text: On April 24 we'll start using GitHub Copilot interaction data for AI model training unless you opt out.
+            - link "Review this update" [ref=e140] [cursor=pointer]:
+              - /url: https://gh.io/AAzfaht
+            - text: and manage your preferences in your
+            - link "GitHub account settings" [ref=e141] [cursor=pointer]:
+              - /url: https://github.com/settings/copilot/features
+            - text: .
+        - button "Dismiss banner" [ref=e142] [cursor=pointer]:
+          - img [ref=e143]
+  - main [ref=e148]:
+    - generic [ref=e150]:
+      - generic [ref=e152]:
+        - img "Owner avatar" [ref=e153]
+        - strong [ref=e154]:
+          - link "expert-boucles" [ref=e155] [cursor=pointer]:
+            - /url: /JMKEzek/expert-boucles
+        - generic [ref=e156]: Public
+      - generic [ref=e157]:
+        - list:
+          - listitem [ref=e158]:
+            - button "Pin" [ref=e161] [cursor=pointer]:
+              - img [ref=e162]
+              - text: Pin
+          - listitem [ref=e164]:
+            - button "Watching a repository" [disabled] [ref=e167]:
+              - generic [ref=e168]:
+                - generic:
+                  - img
+                - generic [ref=e169]: Watch
+          - listitem [ref=e170]:
+            - generic [ref=e171]:
+              - button "Fork 0" [disabled] [ref=e172]:
+                - img [ref=e173]
+                - text: Fork
+                - generic "0" [ref=e175]
+              - group [ref=e176]:
+                - button "See your forks of this repository" [ref=e177] [cursor=pointer]:
+                  - img [ref=e178]
+          - listitem [ref=e180]:
+            - generic [ref=e182]:
+              - button "Star this repository (0)" [ref=e184] [cursor=pointer]:
+                - img [ref=e185]
+                - text: Star
+                - generic "0 users starred this repository" [ref=e187]: "0"
+              - button "Add this repository to a list" [ref=e191] [cursor=pointer]:
+                - img
+    - generic [ref=e196]:
+      - generic [ref=e197]:
+        - generic [ref=e199]:
+          - img [ref=e200]
+          - heading "Start coding with Codespaces" [level=3] [ref=e203]
+          - paragraph [ref=e204]: Add a README file and start coding in a secure, configurable, and dedicated development environment.
+          - link "Create a codespace" [ref=e205] [cursor=pointer]:
+            - /url: /codespaces/new/JMKEzek/expert-boucles?auto_init=1&resume=1
+            - generic [ref=e207]: Create a codespace
+        - generic [ref=e209]:
+          - img [ref=e210]
+          - heading "Add collaborators to this repository" [level=3] [ref=e212]
+          - paragraph [ref=e213]: Search for people using their GitHub username or email address.
+          - link "Invite collaborators" [ref=e214] [cursor=pointer]:
+            - /url: /JMKEzek/expert-boucles/settings/access
+            - generic [ref=e216]: Invite collaborators
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - heading "Quick setup — if you’ve done this kind of thing before" [level=3] [ref=e219]:
+            - strong [ref=e220]: Quick setup
+            - text: — if you’ve done this kind of thing before
+          - generic [ref=e221]:
+            - link "Set up in Desktop" [ref=e223] [cursor=pointer]:
+              - /url: https://desktop.github.com
+              - img [ref=e224]
+              - text: Set up in Desktop
+            - strong [ref=e228]: or
+            - generic [ref=e230]:
+              - button "HTTPS" [ref=e232] [cursor=pointer]
+              - button "SSH" [ref=e234] [cursor=pointer]
+            - generic [ref=e237]:
+              - textbox "Clone URL" [ref=e238]: https://github.com/JMKEzek/expert-boucles.git
+              - button "Copy to clipboard" [ref=e240] [cursor=pointer]:
+                - img [ref=e241]
+          - paragraph [ref=e244]:
+            - text: Get started by
+            - link "creating a new file" [ref=e245] [cursor=pointer]:
+              - /url: /JMKEzek/expert-boucles/new/main
+            - text: or
+            - link "uploading an existing file" [ref=e246] [cursor=pointer]:
+              - /url: /JMKEzek/expert-boucles/upload
+            - text: . We recommend every repository include a
+            - link "README" [ref=e247] [cursor=pointer]:
+              - /url: /JMKEzek/expert-boucles/new/main?readme=1
+            - text: ","
+            - link "LICENSE" [ref=e248] [cursor=pointer]:
+              - /url: /JMKEzek/expert-boucles/new/main?filename=LICENSE.md
+            - text: ", and"
+            - link ".gitignore" [ref=e249] [cursor=pointer]:
+              - /url: /JMKEzek/expert-boucles/new/main?filename=.gitignore
+            - text: .
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - heading "…or create a new repository on the command line" [level=3] [ref=e252]
+            - generic [ref=e253]:
+              - button "Copy to clipboard" [ref=e255] [cursor=pointer]:
+                - img [ref=e256]
+              - generic [ref=e259]:
+                - text: echo "# expert-boucles" >> README.md git init git add README.md git commit -m "first commit" git branch -M main
+                - generic [ref=e260]: git remote add origin https://github.com/JMKEzek/expert-boucles.git
+                - text: git push -u origin main
+          - generic [ref=e261]:
+            - heading "…or push an existing repository from the command line" [level=3] [ref=e262]
+            - generic [ref=e263]:
+              - button "Copy to clipboard" [ref=e265] [cursor=pointer]:
+                - img [ref=e266]
+              - generic [ref=e269]:
+                - generic [ref=e270]: git remote add origin https://github.com/JMKEzek/expert-boucles.git
+                - text: git branch -M main git push -u origin main
+      - generic [ref=e271]:
+        - img [ref=e272]
+        - strong [ref=e274]: ProTip!
+        - text: Use the URL for this page when adding GitHub as a remote.
+  - contentinfo [ref=e275]:
+    - heading "Footer" [level=2] [ref=e276]
+    - generic [ref=e277]:
+      - generic [ref=e278]:
+        - link "GitHub Homepage" [ref=e279] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e280]
+        - generic [ref=e282]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e283]:
+        - heading "Footer navigation" [level=3] [ref=e284]
+        - list "Footer navigation" [ref=e285]:
+          - listitem [ref=e286]:
+            - link "Terms" [ref=e287] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e288]:
+            - link "Privacy" [ref=e289] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e290]:
+            - link "Security" [ref=e291] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e292]:
+            - link "Status" [ref=e293] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e294]:
+            - link "Community" [ref=e295] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e296]:
+            - link "Docs" [ref=e297] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e298]:
+            - link "Contact" [ref=e299] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e300]:
+            - button "Manage cookies" [ref=e302] [cursor=pointer]
+          - listitem [ref=e303]:
+            - button "Do not share my personal information" [ref=e305] [cursor=pointer]

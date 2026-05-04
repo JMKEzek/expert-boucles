@@ -1,0 +1,147 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e4]:
+        - link "Prestations" [ref=e5] [cursor=pointer]:
+          - /url: /prestations
+        - link "Réalisations" [ref=e6] [cursor=pointer]:
+          - /url: /realisations
+      - link "Expert Boucles Paris" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: Expert Boucles
+        - generic [ref=e9]: Paris
+      - navigation [ref=e10]:
+        - link "À Propos" [ref=e11] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+        - link "Réserver" [ref=e13] [cursor=pointer]:
+          - /url: /prestations
+  - generic:
+    - generic:
+      - link "Prestations":
+        - /url: /prestations
+      - link "Réalisations":
+        - /url: /realisations
+      - link "À Propos":
+        - /url: /a-propos
+      - link "Contact":
+        - /url: /contact
+      - link "Réserver":
+        - /url: /prestations
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: Spécialiste · Paris 75009
+        - heading "Expert Boucles" [level=1] [ref=e22]:
+          - text: Expert
+          - text: Boucles
+        - paragraph [ref=e23]: L'art de sublimer vos cheveux naturels
+        - link "Découvrir les prestations" [ref=e24] [cursor=pointer]:
+          - /url: /prestations
+      - generic [ref=e26]: Défiler
+    - generic [ref=e31]:
+      - link "Prestations" [ref=e32] [cursor=pointer]:
+        - /url: /prestations
+        - generic [ref=e36]: Prestations
+      - link "Réalisations" [ref=e37] [cursor=pointer]:
+        - /url: /realisations
+        - generic [ref=e41]: Réalisations
+  - generic [ref=e43]:
+    - generic [ref=e45]: Avis clients
+    - generic [ref=e47]:
+      - blockquote [ref=e48]: “Yannick est un expert. Ma coupe correspond exactement à ce que je voulais. Très attentif aux détails et à mes cheveux bouclés.”
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: Marie D.
+        - paragraph [ref=e52]: Il y a 1 semaine · Google Reviews
+      - paragraph [ref=e53]: 4.9 · 128 avis vérifiés
+      - generic [ref=e54]:
+        - button "Avis précédent" [ref=e55] [cursor=pointer]:
+          - img [ref=e56]
+        - generic [ref=e58]:
+          - button "Avis 1" [ref=e59] [cursor=pointer]
+          - button "Avis 2" [ref=e60] [cursor=pointer]
+          - button "Avis 3" [ref=e61] [cursor=pointer]
+        - button "Avis suivant" [ref=e62] [cursor=pointer]:
+          - img [ref=e63]
+  - generic [ref=e66]:
+    - generic [ref=e67]:
+      - generic [ref=e68]: Instagram
+      - heading "Réalisations" [level=2] [ref=e70]
+    - generic [ref=e71]:
+      - link "Coupe moderne" [ref=e72] [cursor=pointer]:
+        - /url: "#"
+        - img "Coupe moderne" [ref=e73]
+        - img [ref=e75]
+      - link "Styling naturel" [ref=e77] [cursor=pointer]:
+        - /url: "#"
+        - img "Styling naturel" [ref=e78]
+        - img [ref=e80]
+      - link "Boucles définies" [ref=e82] [cursor=pointer]:
+        - /url: "#"
+        - img "Boucles définies" [ref=e83]
+        - img [ref=e85]
+      - link "Avant / Après" [ref=e87] [cursor=pointer]:
+        - /url: "#"
+        - img "Avant / Après" [ref=e88]
+        - img [ref=e90]
+      - link "Soins" [ref=e92] [cursor=pointer]:
+        - /url: "#"
+        - img "Soins" [ref=e93]
+        - img [ref=e95]
+      - link "Technique" [ref=e97] [cursor=pointer]:
+        - /url: "#"
+        - img "Technique" [ref=e98]
+        - img [ref=e100]
+    - link "Suivre @expert_boucles" [ref=e103] [cursor=pointer]:
+      - /url: https://instagram.com/expert_boucles
+  - generic [ref=e105]:
+    - generic [ref=e106]: Rendez-vous
+    - heading "Transformez vos cheveux" [level=2] [ref=e108]
+    - paragraph [ref=e109]: Premier rendez-vous — consultation offerte
+    - link "Réserver une consultation" [ref=e110] [cursor=pointer]:
+      - /url: /prestations
+  - contentinfo [ref=e111]:
+    - link "Expert Boucles Paris 75009" [ref=e113] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e114]: Expert Boucles
+      - generic [ref=e115]: Paris 75009
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - generic [ref=e119]: Navigation
+        - list [ref=e120]:
+          - listitem [ref=e121]:
+            - link "Prestations" [ref=e122] [cursor=pointer]:
+              - /url: /prestations
+          - listitem [ref=e123]:
+            - link "Réalisations" [ref=e124] [cursor=pointer]:
+              - /url: /realisations
+          - listitem [ref=e125]:
+            - link "À Propos" [ref=e126] [cursor=pointer]:
+              - /url: /a-propos
+          - listitem [ref=e127]:
+            - link "Contact" [ref=e128] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e129]:
+        - generic [ref=e130]: Contact
+        - generic [ref=e131]:
+          - link "07 81 31 30 94" [ref=e133] [cursor=pointer]:
+            - /url: tel:0781313094
+          - link "contact@expert-boucles.com" [ref=e135] [cursor=pointer]:
+            - /url: mailto:contact@expert-boucles.com
+          - generic [ref=e136]: Paris 75009, France
+      - generic [ref=e137]:
+        - generic [ref=e138]: Suivre
+        - generic [ref=e139]:
+          - link "Instagram" [ref=e140] [cursor=pointer]:
+            - /url: https://instagram.com/expert_boucles
+          - link "Facebook" [ref=e141] [cursor=pointer]:
+            - /url: https://facebook.com
+    - generic [ref=e143]:
+      - generic [ref=e144]: © 2026 Expert Boucles. Tous droits réservés.
+      - generic [ref=e145]:
+        - link "CGV" [ref=e146] [cursor=pointer]:
+          - /url: /cgv
+        - generic [ref=e147]: ·
+        - link "Mentions légales" [ref=e148] [cursor=pointer]:
+          - /url: /mentions-legales

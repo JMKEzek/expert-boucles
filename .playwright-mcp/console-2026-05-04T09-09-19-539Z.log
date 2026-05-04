@@ -1,0 +1,7 @@
+[     103ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/css/app/layout.css?v=1777885759548:0
+[     104ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/css/app/page.css?v=1777885759548:0
+[     129ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/webpack.js?v=1777885759548:0
+[     129ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1777885759548:0
+[     129ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[     129ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/page.js:0
+[     380ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F400x400%3Ftext%3D&w=3840&q=75:0
