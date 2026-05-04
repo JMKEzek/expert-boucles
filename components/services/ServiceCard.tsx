@@ -2,11 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export interface ServiceCardProps {
-  id: string;
+  id: number | string;
   name: string;
   slug: string;
-  price: number;
-  duration: number;
+  price: number | null;
+  priceLabel?: string;
+  duration: number | null;
   description: string;
   image?: string;
   category?: string;
@@ -16,6 +17,7 @@ export function ServiceCard({
   name,
   slug,
   price,
+  priceLabel,
   duration,
   description,
   image,
@@ -59,12 +61,16 @@ export function ServiceCard({
 
         <div className="flex items-center gap-16">
           <span className="text-noir text-xs font-light tracking-wide">
-            {price} €
+            {price !== null ? `${price} €` : (priceLabel || 'Devis sur demande')}
           </span>
-          <span className="text-gris-light text-xs">—</span>
-          <span className="text-gris-medium text-10px uppercase tracking-0.15em">
-            {duration} min
-          </span>
+          {duration !== null && (
+            <>
+              <span className="text-gris-light text-xs">—</span>
+              <span className="text-gris-medium text-10px uppercase tracking-0.15em">
+                {duration} min
+              </span>
+            </>
+          )}
         </div>
       </div>
     </Link>

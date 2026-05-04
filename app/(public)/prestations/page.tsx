@@ -1,97 +1,75 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { ServiceGrid } from '@/components/services/ServiceGrid';
+import { SERVICES } from '@/lib/constants/services';
+import { AcuityEmbed } from '@/components/booking/AcuityEmbed';
 
-const services = [
-  {
-    id: '1',
-    name: 'Coupe Boucles',
-    slug: 'coupe-boucles',
-    price: 60,
-    duration: 45,
-    description: 'Coupe spécialisée pour cheveux bouclés, adaptée à votre texture.',
-    category: 'Coupes',
+export const metadata: Metadata = {
+  title: 'Prestations',
+  description:
+    'Découvrez les prestations Expert Boucles : coupes, soins, colorations et coiffages pour cheveux bouclés à Paris 75009.',
+  alternates: {
+    canonical: '/prestations',
   },
-  {
-    id: '2',
-    name: 'Soin Profond',
-    slug: 'soin-profond',
-    price: 45,
-    duration: 30,
-    description: 'Soin hydratant et nourrissant pour des boucles sublimées.',
-    category: 'Soins',
+  openGraph: {
+    title: 'Prestations | Expert Boucles',
+    description:
+      'Services sur mesure pour sublimer les cheveux bouclés, frisés et texturés.',
+    url: '/prestations',
+    images: [
+      {
+        url: '/prestations.avif',
+        width: 1200,
+        height: 630,
+        alt: 'Prestations Expert Boucles',
+      },
+    ],
   },
-  {
-    id: '3',
-    name: 'Styling',
-    slug: 'styling',
-    price: 50,
-    duration: 40,
-    description: 'Mise en forme et définition parfaite de vos boucles naturelles.',
-    category: 'Styling',
-  },
-  {
-    id: '4',
-    name: 'Permanente',
-    slug: 'permanente',
-    price: 120,
-    duration: 120,
-    description: 'Permanente pour cheveux naturels, résultats durables.',
-    category: 'Traitements',
-  },
-  {
-    id: '5',
-    name: 'Coloration',
-    slug: 'coloration',
-    price: 75,
-    duration: 60,
-    description: 'Coloration professionnelle, teintes naturelles.',
-    category: 'Coloration',
-  },
-  {
-    id: '6',
-    name: 'Défrisage',
-    slug: 'defrisage',
-    price: 100,
-    duration: 90,
-    description: 'Défrisage doux et qualitatif pour cheveux sains.',
-    category: 'Traitements',
-  },
-];
+};
 
 export default function PrestationsPage() {
   return (
     <>
-      {/* Hero section */}
       <section className="py-96 md:py-120 bg-noir text-blanc">
         <div className="container-fluid text-center">
-          <h1 className="text-h1 text-blanc mb-32">
-            Prestations
-          </h1>
+          <h1 className="text-h1 text-blanc mb-32">Prestations</h1>
           <p className="text-body max-w-2xl mx-auto text-gris-medium">
-            Expert Boucles propose une gamme complète de services dédiés à la beauté et la santé de vos cheveux bouclés.
+            Expert Boucles propose une gamme complète de services dédiés à la beauté
+            et la santé de vos cheveux bouclés.
           </p>
         </div>
       </section>
 
-      {/* Services grid */}
       <section className="section-padding bg-blanc">
         <div className="container-fluid">
-          <ServiceGrid services={services} columns={3} />
+          <ServiceGrid services={SERVICES} columns={3} />
         </div>
       </section>
 
-      {/* CTA section */}
       <section className="section-padding bg-gris-light">
         <div className="container-fluid text-center">
           <h2 className="text-h2 text-noir mb-32">
             Prêt à transformer vos cheveux ?
           </h2>
           <p className="text-body text-gris-dark mb-48 max-w-2xl mx-auto">
-            Réservez votre consultation gratuite avec Yannick pour discuter du service idéal pour vous.
+            Réservez votre consultation gratuite avec Yannick pour discuter du service
+            idéal pour vous.
           </p>
           <Link href="#booking" className="btn-primary">
             Réserver une consultation
           </Link>
+        </div>
+      </section>
+
+      <section id="booking" className="section-padding bg-blanc">
+        <div className="container-fluid">
+          <div className="text-center mb-64">
+            <h2 className="text-h2 text-noir mb-16">Réserver un rendez-vous</h2>
+            <p className="text-body text-gris-dark max-w-2xl mx-auto">
+              Choisissez votre prestation et votre créneau directement en ligne.
+            </p>
+          </div>
+          <AcuityEmbed ownerID={process.env.NEXT_PUBLIC_ACUITY_OWNER_ID || ''} />
         </div>
       </section>
     </>

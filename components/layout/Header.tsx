@@ -94,7 +94,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/prestations"
+              href="/reservation"
               className={`text-11px uppercase tracking-0.2em font-medium border px-20 py-4 transition-all duration-350 ${
                 useDarkStyle
                   ? 'border-noir text-noir hover:bg-noir hover:text-blanc'
@@ -150,7 +150,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/prestations"
+            href="/reservation"
             className="btn-inverted mt-16"
             onClick={() => setIsMobileMenuOpen(false)}
           >

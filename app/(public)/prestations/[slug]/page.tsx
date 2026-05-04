@@ -1,153 +1,157 @@
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ServiceDetail } from '@/components/services/ServiceDetail';
+import type { Metadata } from 'next';
+import { getServiceBySlug, SERVICES } from '@/lib/constants/services';
+import { AcuityEmbed } from '@/components/booking/AcuityEmbed';
 
-const serviceDetails: Record<
-  string,
-  {
-    id: string;
-    name: string;
-    slug: string;
-    price: number;
-    duration: number;
-    description: string;
-    detailedDescription: string;
-    category: string;
-    includes: string[];
-  }
-> = {
-  'coupe-boucles': {
-    id: '1',
-    name: 'Coupe Boucles',
-    slug: 'coupe-boucles',
-    price: 60,
-    duration: 45,
-    description: 'Coupe spécialisée pour cheveux bouclés, adaptée à votre texture.',
-    detailedDescription:
-      'Une coupe conçue spécifiquement pour valoriser vos cheveux bouclés naturels. Yannick effectue un diagnostic précis de votre type de boucles pour créer une coupe qui épousera parfaitement votre texture.',
-    category: 'Coupes',
-    includes: [
-      'Diagnostic de texture',
-      'Coupe structurée',
-      'Consignes de coiffage',
-      'Produits recommandés',
-    ],
-  },
-  'soin-profond': {
-    id: '2',
-    name: 'Soin Profond',
-    slug: 'soin-profond',
-    price: 45,
-    duration: 30,
-    description: 'Soin hydratant et nourrissant pour des boucles sublimées.',
-    detailedDescription:
-      'Un soin intensif qui nourrit profondément vos cheveux bouclés. Idéal pour restaurer l\'hydratation, réparer les dommages et apporter brillance et definition à vos boucles.',
-    category: 'Soins',
-    includes: [
-      'Diagnostic du cuir chevelu',
-      'Soin intensif adapté',
-      'Massage relaxant',
-      'Conseils d\'hydratation',
-    ],
-  },
-  'styling': {
-    id: '3',
-    name: 'Styling',
-    slug: 'styling',
-    price: 50,
-    duration: 40,
-    description: 'Mise en forme et définition parfaite de vos boucles naturelles.',
-    detailedDescription:
-      'Un service de coiffage professionnel pour mettre en valeur vos boucles naturelles. Yannick utilise des techniques spécialisées pour créer une définition optimale et une tenue longue durée.',
-    category: 'Styling',
-    includes: [
-      'Shampooing spécialisé',
-      'Soin de définition',
-      'Mise en forme professionnelle',
-      'Conseils quotidiens',
-    ],
-  },
+type Props = {
+  params: { slug: string };
 };
 
-interface PageProps {
-  params: {
-    slug: string;
+export async function generateStaticParams() {
+  return SERVICES.map((service) => ({
+    slug: service.slug,
+  }));
+}
+
+export function generateMetadata({ params }: Props): Metadata {
+  const service = getServiceBySlug(params.slug);
+
+  if (!service) {
+    return {
+      title: 'Prestation introuvable',
+    };
+  }
+
+  return {
+    title: service.name,
+    description: service.description,
+    alternates: {
+      canonical: `/prestations/${service.slug}`,
+    },
+    openGraph: {
+      title: `${service.name} | Expert Boucles`,
+      description: service.description,
+      url: `/prestations/${service.slug}`,
+      images: [
+        {
+          url: '/prestations.avif',
+          width: 1200,
+          height: 630,
+          alt: service.name,
+        },
+      ],
+    },
   };
 }
 
-export default function ServiceDetailPage({ params }: PageProps) {
-  const service = serviceDetails[params.slug];
+export default function ServiceDetailPage({ params }: Props) {
+  const service = getServiceBySlug(params.slug);
 
   if (!service) {
-    return (
-      <div className="py-96 text-center bg-blanc">
-        <h1 className="text-h1 text-noir mb-32">Service non trouvé</h1>
-        <Link href="/prestations" className="btn-primary">
-          Retour aux prestations
-        </Link>
-      </div>
-    );
+    notFound();
   }
 
   return (
-    <>
-      {/* Breadcrumb */}
-      <div className="bg-gris-light py-16">
+    <div className="min-h-screen bg-blanc">
+      <div className="py-96 md:py-120 bg-noir text-blanc">
         <div className="container-fluid">
-          <nav className="flex items-center gap-12 text-10px uppercase tracking-0.2em">
-            <Link href="/" className="text-gris-dark hover-opacity">
-              Accueil
-            </Link>
-            <span className="text-gris-medium">/</span>
-            <Link href="/prestations" className="text-gris-dark hover-opacity">
-              Prestations
-            </Link>
-            <span className="text-gris-medium">/</span>
-            <span className="text-noir">{service.name}</span>
-          </nav>
+          <div className="max-w-4xl">
+            <h1 className="text-h1 text-or mb-32">{service.name}</h1>
+            <p className="text-body max-w-2xl text-gris-medium">
+              {service.description}
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Content */}
-      <section className="section-padding bg-blanc">
-        <div className="container-fluid">
-          <ServiceDetail {...service} />
-        </div>
-      </section>
-
-      {/* Related services */}
-      <section className="section-padding bg-gris-light">
-        <div className="container-fluid">
-          <h2 className="text-h2 text-noir text-center mb-48">
-            Autres services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-32">
-            {Object.values(serviceDetails)
-              .filter((s) => s.slug !== params.slug)
-              .slice(0, 3)
-              .map((relatedService) => (
-                <Link
-                  key={relatedService.id}
-                  href={`/prestations/${relatedService.slug}`}
-                  className="group card-base hover-lift transition-all duration-350"
-                >
-                  <span className="text-label text-gris-medium">{relatedService.category}</span>
-                  <h3 className="text-h4 text-noir mt-16 mb-16 group-hover:opacity-60 transition-opacity duration-350">
-                    {relatedService.name}
-                  </h3>
-                  <p className="text-body-small text-gris-dark mb-24 line-clamp-2">
-                    {relatedService.description}
+      <div className="container-fluid section-padding">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-64 items-start">
+          <div className="lg:col-span-2">
+            <div className="mb-48 p-32 bg-gris-light">
+              <div className="grid grid-cols-2 gap-32">
+                <div>
+                  <p className="text-label text-gris-dark mb-8">Tarif</p>
+                  <p className="text-h3 text-or">
+                    {service.price !== null ? `${service.price}€` : (service.priceLabel || 'Devis sur demande')}
                   </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-noir font-light">{relatedService.price} €</span>
-                    <span className="text-10px uppercase tracking-0.15em text-gris-medium">
-                      {relatedService.duration} min
-                    </span>
-                  </div>
-                </Link>
-              ))}
+                </div>
+                <div>
+                  <p className="text-label text-gris-dark mb-8">Durée</p>
+                  <p className="text-h3 text-noir">
+                    {service.duration !== null ? `${service.duration} min` : 'À définir'}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {service.includes.length > 0 && (
+              <div className="mb-48">
+                <h2 className="text-h2 text-noir mb-32">Inclus dans cette prestation</h2>
+                <ul className="space-y-16">
+                  {service.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-16 text-body text-gris-dark">
+                      <span className="text-or mt-2" aria-hidden="true">
+                        ✓
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="mb-48">
+              <h2 className="text-h2 text-noir mb-32">Détail du service</h2>
+              <p className="text-body text-gris-dark max-w-3xl">
+                {service.description}
+              </p>
+            </div>
+
+            <span className="inline-block px-16 py-8 border border-or text-or text-label">
+              {service.category.charAt(0).toUpperCase() + service.category.slice(1)}
+            </span>
           </div>
+
+          <aside className="lg:col-span-1">
+            <div className="sticky top-96 space-y-48">
+              <div className="p-32 bg-noir text-blanc">
+                <h2 className="text-h4 text-or mb-16">Réserver cette prestation</h2>
+                <p className="text-body-small text-gris-medium mb-32">
+                  Choisissez votre créneau avec Acuity Scheduling.
+                </p>
+                <AcuityEmbed ownerID={process.env.NEXT_PUBLIC_ACUITY_OWNER_ID || ''} />
+              </div>
+
+              <div>
+                <h2 className="text-h4 text-noir mb-24">Autres prestations</h2>
+                <ul className="space-y-16">
+                  {SERVICES.filter((s) => s.id !== service.id)
+                    .slice(0, 5)
+                    .map((s) => (
+                      <li key={s.id}>
+                        <Link
+                          href={`/prestations/${s.slug}`}
+                          className="text-body-small text-or hover:text-noir transition-colors"
+                        >
+                          {s.name}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </aside>
         </div>
-      </section>
-    </>
+      </div>
+
+      <div className="border-t border-gris-light">
+        <div className="container-fluid py-32">
+          <Link href="/prestations" className="text-body-small text-or hover:text-noir transition-colors">
+            ← Retour aux prestations
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

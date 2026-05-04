@@ -81,7 +81,9 @@ export function ServiceDetail({
             <div className="card-dark spacing-gap-tight">
               <div>
                 <p className="text-label">Tarif</p>
-                <p className="text-4xl font-light text-or mt-8">{price.toFixed(2)} €</p>
+                <p className="text-4xl font-light text-or mt-8">
+                  {price !== null ? `${price.toFixed(2)} €` : 'Devis sur demande'}
+                </p>
               </div>
               <div className="border-t border-gris-dark pt-16">
                 <p className="text-label">Durée</p>

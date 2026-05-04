@@ -4,21 +4,54 @@ import { Footer } from '@/components/layout/Footer';
 import { ReviewCarousel } from '@/components/reviews/ReviewCarousel';
 import { FullScreenScroll } from '@/components/home/FullScreenScroll';
 import { HeroSlide } from '@/components/home/HeroSlide';
-import type { ReviewsResponse } from './api/google-reviews/route';
 
-async function fetchReviews() {
+interface ReviewsResponse {
+  reviews: { id: string; author: string; rating: number; text: string; date: string; authorImage?: string }[];
+  averageRating: number;
+  totalReviews: number;
+}
+
+async function fetchReviews(): Promise<ReviewsResponse> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/api/google-reviews`, {
-      next: { revalidate: 86400 }, // Cache 24h
-    });
+    const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+    const placeId = process.env.GOOGLE_PLACE_ID;
 
-    if (!response.ok) {
-      console.error('Failed to fetch reviews:', response.status);
+    if (!apiKey || !placeId) {
       return { reviews: [], averageRating: 0, totalReviews: 0 };
     }
 
-    return await response.json() as ReviewsResponse;
+    const url = new URL('https://maps.googleapis.com/maps/api/place/details/json');
+    url.searchParams.append('place_id', placeId);
+    url.searchParams.append('fields', 'rating,user_ratings_total,reviews');
+    url.searchParams.append('language', 'fr');
+    url.searchParams.append('key', apiKey);
+
+    const response = await fetch(url.toString(), {
+      next: { revalidate: 86400 }, // Cache Next.js 24h
+    });
+
+    if (!response.ok) return { reviews: [], averageRating: 0, totalReviews: 0 };
+
+    const data = await response.json();
+    if (data.status !== 'OK') return { reviews: [], averageRating: 0, totalReviews: 0 };
+
+    const result = data.result || {};
+    const reviews = (result.reviews || [])
+      .filter((r: { rating: number; text?: string }) => r.rating >= 4.5 && (r.text?.trim().length ?? 0) > 0)
+      .map((r: { author_name: string; rating: number; text: string; relative_time_description: string; profile_photo_url?: string; time: number }, i: number) => ({
+        id: `${r.time}-${i}`,
+        author: r.author_name,
+        rating: r.rating,
+        text: r.text,
+        date: r.relative_time_description,
+        authorImage: r.profile_photo_url,
+      }));
+
+    return {
+      reviews,
+      averageRating: result.rating || 0,
+      totalReviews: result.user_ratings_total || 0,
+    };
   } catch (error) {
     console.error('Error fetching reviews:', error);
     return { reviews: [], averageRating: 0, totalReviews: 0 };
@@ -40,7 +73,7 @@ export default async function Home() {
           title={['Expert', 'Boucles']}
           description="L'art de sublimer vos cheveux naturels"
           ctaText="Prendre un rendez-vous"
-          ctaHref="/prestations#booking"
+          ctaHref="/reservation"
         />
 
         {/* ─── SLIDE 2: HERO YANNICK ─── */}
@@ -134,7 +167,7 @@ export default async function Home() {
           <p className="text-gris-dark text-xs uppercase tracking-0.2em mb-48">
             Premier rendez-vous — consultation offerte
           </p>
-          <Link href="/prestations" className="btn-primary">
+          <Link href="/reservation" className="btn-primary">
             Réserver une consultation
           </Link>
         </div>
