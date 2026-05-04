@@ -4,7 +4,7 @@
 
 **Client** : Yannick — Coiffeur spécialisé cheveux bouclés, Paris 75009
 **Date** : Mai 2026
-**Stack** : Next.js 14 + TypeScript + Tailwind CSS + shadcn/ui + PostgreSQL + Prisma + Acuity Scheduling
+**Stack** : Next.js 14 + TypeScript + Tailwind CSS + Acuity Scheduling
 **Déploiement** : Vercel
 **Timeline** : 8-10 semaines
 
@@ -19,27 +19,19 @@
 - **Pages publiques** : Accueil, Prestations, À Propos, Réalisations, Contact, CGV, Mentions légales
 
 ### Backend
-- **Database** : PostgreSQL (Supabase ou Railway)
-- **ORM** : Prisma
-- **Auth** : ~~NextAuth.js~~ — supprimé (Acuity gère les clients)
-- **API Routes** : `/api/services`, `/api/google-reviews`, `/api/instagram-feed`, `/api/contact`, `/api/webhooks/acuity`
+- ❌ **Database** : Supprimée (pas de persistance nécessaire)
+- ❌ **ORM** : Supprimé (Prisma)
+- **API Routes** : `/api/google-reviews` uniquement (pour les avis clients)
+- **Auth** : ❌ Supprimée — Acuity gère les clients nativement
 
 ### Intégrations
+- **Services** : 17 services figés dans `lib/constants/services.ts` (pas de DB)
 - **Booking** : Acuity Scheduling ($16/mois) — gère entièrement disponibilités, paiements Stripe, emails
 - **Paiement** : Stripe via Acuity (pas de custom Stripe)
 - **Avis clients** : Google Places API → composant ReviewCarousel 100% dynamique
-- **Réalisations** : Instagram Graph API → composant InstagramFeed
+- **Réalisations** : Instagram Graph API → composant InstagramFeed (optionnel)
 - **Email contact** : Resend (uniquement formulaire contact, pas emails RDV)
 - **Maps** : Google Maps Embed API
-
-### Database Schema (Prisma)
-```prisma
-- Service (id, slug, name, price, duration, category, description, includes[], image, acuityServiceId, active, createdAt, updatedAt)
-- Booking (id, acuityId, serviceId, date, time, status, clientName, clientEmail, clientPhone, notes, createdAt, updatedAt)
-  — miroir léger des RDV Acuity, alimenté par webhook uniquement
-
-❌ SUPPRIMÉS : User, Account (NextAuth) — Acuity gère les clients
-```
 
 ---
 
@@ -52,9 +44,6 @@ expert-boucles/
 ├── next.config.js
 ├── tailwind.config.js
 ├── tsconfig.json
-├── prisma/
-│   ├── schema.prisma
-│   └── seed.ts
 ├── app/
 │   ├── layout.tsx
 │   ├── page.tsx
@@ -70,12 +59,7 @@ expert-boucles/
 │   │   ├── mentions-legales/page.tsx
 │   │   └── remboursement-annulation/page.tsx
 │   └── api/
-│       ├── services/route.ts + [slug]/route.ts
-│       ├── google-reviews/route.ts
-│       ├── instagram-feed/route.ts
-│       ├── webhooks/acuity/route.ts
-│       └── contact/route.ts
-│   # ❌ SUPPRIMÉS : auth/[...nextauth]/, bookings/me/
+│       └── google-reviews/route.ts    # Avis clients depuis Google Places API
 ├── components/
 │   ├── layout/
 │   │   ├── Header.tsx
@@ -91,18 +75,10 @@ expert-boucles/
 │       ├── ReviewCarousel.tsx (100% dynamique API)
 │       └── ReviewCarousel.types.ts
 ├── lib/
-│   ├── api/
-│   │   ├── services.ts
-│   │   ├── acuity.ts
-│   │   ├── instagram.ts
-│   │   ├── google.ts
-│   │   └── email.ts
-│   ├── db.ts
+│   ├── constants/
+│   │   └── services.ts          # 17 services figés (données en dur)
 │   └── types/
-│       ├── service.ts
-│       ├── booking.ts
-│       └── review.ts
-│   # ❌ SUPPRIMÉS : auth.ts, types/user.ts
+│       └── review.ts            # Types pour les avis Google
 ├── public/
 │   ├── logo.svg
 │   ├── hero.jpg
@@ -123,34 +99,32 @@ expert-boucles/
 - Carrousel affiche : auteur, stars, texte, photo profil, date
 - Navigation flèches, responsive
 
-### 2. **Booking 100% Acuity Scheduling**
+### 2. **17 Services — Données Figées**
+- ✅ Fichier `lib/constants/services.ts` — tableau TypeScript avec tous les services
+- Champs : id, slug, name, price, duration, category, description, includes[], image
+- ✅ **Pas de DB, pas de seed** — données en dur, toujours disponibles
+- Routes `/prestations` et `/prestations/[slug]` utilisent les données constants
+- Pages statiques générées avec `generateStaticParams()`
+
+### 3. **Booking 100% Acuity Scheduling**
 - Pas de système de réservation custom (Calendar, TimeSlotPicker, etc.)
-- Widget Acuity iframe intégré sur pages prestations
+- Widget Acuity iframe intégré sur les pages prestations
 - Paiement Stripe géré nativement par Acuity
-- Webhook Acuity sync RDV en DB (table Booking — lecture seule pour clients)
 - Yannick gère tout depuis interface Acuity admin
 
-### 3. **17 Services**
-- Seed initial en DB Prisma
-- Champs : name, slug, price, duration, category, description, includes[], image, acuityServiceId
-- acuityServiceId renseigné après création des services dans Acuity (Agent 4)
-- Route `/prestations/[slug]` dynamique (données depuis DB)
-
-### 4. **Instagram Feed — Dynamique**
-- API Instagram Graph récupère posts @expert_boucles
+### 4. **Instagram Feed — Optionnel**
+- API Instagram Graph récupère posts @expert_boucles (optionnel)
 - Composant InstagramFeed affiche grille masonry
 - Cache 6h
 
 ### 5. **Pas d'authentification utilisateur**
-- ⚠️ NextAuth.js supprimé — Acuity gère les clients nativement
+- Acuity gère les clients nativement
 - Pas de pages connexion/inscription/mon-compte
 - Pas de middleware de protection de routes
-- Pas de tables User/Account en DB
 
 ### 6. **Email**
-- Resend : uniquement formulaire contact
-- ⚠️ Emails RDV (confirmation, rappel, annulation) gérés nativement par Acuity
-- Pas de custom email system
+- Resend : uniquement formulaire contact (optionnel)
+- Emails RDV gérés nativement par Acuity
 
 ### 7. **Design System Tailwind**
 - CSS Variables : noir #0A0A0A, or #C9A96E, blanc #F5F5F0
@@ -210,29 +184,28 @@ Voir **AGENT_BRIEFS_NEXTJS.md** pour briefings détaillés par agent.
 ## ⚙️ Variables d'environnement
 
 ```
-# Database
-DATABASE_URL=postgresql://...
-DIRECT_URL=postgresql://...
+# Google Places API — Pour les avis clients
+GOOGLE_PLACES_API_KEY=AIza...
+GOOGLE_PLACE_ID=ChIJ...
 
-# ❌ SUPPRIMÉ : NextAuth (NEXTAUTH_URL, NEXTAUTH_SECRET)
-
-# Acuity Scheduling
-NEXT_PUBLIC_ACUITY_OWNER_ID=...
-ACUITY_USER_ID=...
-ACUITY_API_KEY=...
-
-# Instagram API
+# Instagram API (optionnel)
 INSTAGRAM_ACCESS_TOKEN=...
 INSTAGRAM_BUSINESS_ACCOUNT_ID=...
 
-# Google APIs
-GOOGLE_PLACES_API_KEY=...
-GOOGLE_MAPS_API_KEY=...
+# Acuity Scheduling (intégration booking)
+ACUITY_USER_ID=...
+ACUITY_API_KEY=...
+NEXT_PUBLIC_ACUITY_OWNER_ID=...
 
-# Email (Resend)
+# Resend API (email contact, optionnel)
 RESEND_API_KEY=...
 ADMIN_EMAIL=contact@expert-boucles.com
+
+# URL publique
+NEXT_PUBLIC_APP_URL=https://expert-boucles.com
 ```
+
+**NOTE** : ❌ Pas de `DATABASE_URL` — base de données supprimée !
 
 ---
 
@@ -244,19 +217,15 @@ npm run dev                    # Démarrer dev server (localhost:3000)
 npm run build                  # Build production
 npm run start                  # Run production build
 
-# Database
-npx prisma migrate dev         # Créer/appliquer migrations
-npx prisma studio             # GUI Prisma
-npx prisma db seed            # Lancer seed scripts
-
 # Testing
-npm run test                   # Tests (si configured)
 npm run lint                   # ESLint + Prettier
 
 # Deployment (Vercel)
 git push origin main           # Auto-deploy depuis GitHub
 vercel env pull               # Télécharger env vars Vercel
 ```
+
+**NOTE** : ❌ Plus de commandes Prisma — DB supprimée !
 
 ---
 
@@ -274,14 +243,11 @@ vercel env pull               # Télécharger env vars Vercel
 ## ✅ Checklist avant lancement
 
 - [ ] Repo GitHub créé et connecté à Vercel
-- [ ] Database PostgreSQL créée et accessible
-- [ ] Migrations Prisma appliquées
-- [ ] 17 services seedés en DB
+- [ ] ✅ 17 services figurés dans `lib/constants/services.ts`
 - [ ] Acuity Scheduling configuré (17 services, Stripe Live)
-- [ ] acuityServiceId renseigné en DB
 - [ ] Google APIs configurées + clés obtenues
-- [ ] Instagram Access Token obtenu
-- [ ] Resend API key configurée
+- [ ] Instagram Access Token obtenu (optionnel)
+- [ ] Resend API key configurée (optionnel)
 - [ ] Tous les tests passent
 - [ ] Lighthouse score > 90
 - [ ] Vercel deployment réussi
