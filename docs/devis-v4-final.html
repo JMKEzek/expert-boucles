@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Devis — Expert Boucles & La Fabrica</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --noir: #0A0A0A;
+      --or: #C9A96E;
+      --or-pale: #fdf7ec;
+      --blanc: #F5F5F0;
+      --gris: #6B6B6B;
+      --gris-clair: #E8E8E3;
+      --rouge: #b03a2e;
+      --rouge-pale: #fdf2f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 10pt;
+      color: var(--noir);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* ======== COVER ======== */
+    .cover {
+      width: 100%; height: 100vh;
+      background: var(--noir);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 56px 64px;
+      page-break-after: always;
+    }
+    .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .cover-brand { font-family: 'Cormorant Garamond', serif; color: var(--or); font-size: 11pt; letter-spacing: 0.3em; text-transform: uppercase; }
+    .cover-ref { font-size: 8pt; color: #555; text-align: right; line-height: 1.8; }
+    .cover-center { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .cover-eyebrow { color: var(--or); font-size: 8pt; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; }
+    .cover-title { font-family: 'Cormorant Garamond', serif; color: #fff; font-size: 52pt; font-weight: 600; line-height: 1; margin-bottom: 10px; }
+    .cover-sub { font-family: 'Cormorant Garamond', serif; color: var(--or); font-size: 20pt; font-style: italic; }
+    .cover-rule { width: 48px; height: 1px; background: var(--or); margin: 28px 0; }
+    .cover-meta { color: #666; font-size: 9pt; line-height: 2.2; }
+    .cover-meta strong { color: #ccc; font-weight: 500; }
+    .cover-footer { display: flex; justify-content: space-between; border-top: 1px solid #1e1e1e; padding-top: 20px; }
+    .cover-footer div { font-size: 8.5pt; line-height: 1.9; }
+    .cover-footer strong { color: #fff; font-weight: 500; }
+    .cover-footer span { color: #555; }
+
+    /* ======== PAGES ======== */
+    .page { padding: 44px 60px; page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+
+    .page-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 12px; border-bottom: 1px solid var(--gris-clair); margin-bottom: 28px;
+    }
+    .page-header-brand { font-family: 'Cormorant Garamond', serif; color: var(--or); font-size: 10pt; letter-spacing: 0.2em; }
+    .page-header-ref { font-size: 8pt; color: var(--gris); text-align: right; }
+
+    /* Parties */
+    .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 32px; }
+    .partie { border: 1px solid var(--gris-clair); padding: 14px 18px; }
+    .partie-label { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--or); margin-bottom: 6px; }
+    .partie h3 { font-family: 'Cormorant Garamond', serif; font-size: 14pt; font-weight: 600; margin-bottom: 4px; }
+    .partie p { font-size: 8.5pt; color: var(--gris); line-height: 1.7; }
+
+    /* Project banner */
+    .proj-banner {
+      background: var(--noir); color: #fff;
+      display: flex; align-items: center; gap: 20px;
+      padding: 14px 24px; margin-bottom: 20px;
+    }
+    .proj-num { font-family: 'Cormorant Garamond', serif; font-size: 30pt; font-weight: 600; color: var(--or); line-height: 1; }
+    .proj-info h2 { font-family: 'Cormorant Garamond', serif; font-size: 17pt; font-weight: 600; }
+    .proj-info p { font-size: 8pt; color: #999; margin-top: 2px; }
+
+    /* Table */
+    .breakdown { width: 100%; border-collapse: collapse; margin-bottom: 0; }
+    .breakdown thead tr { background: #f0ede8; }
+    .breakdown thead th {
+      padding: 9px 14px; font-size: 7.5pt; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; text-align: left; color: var(--gris);
+    }
+    .breakdown thead th.right { text-align: right; }
+    .breakdown tbody tr { border-bottom: 1px solid var(--gris-clair); }
+    .breakdown tbody tr:nth-child(even) { background: var(--blanc); }
+    .breakdown tbody td { padding: 10px 14px; font-size: 9pt; vertical-align: middle; }
+
+    .td-label strong { display: block; font-weight: 600; font-size: 9.5pt; margin-bottom: 2px; }
+    .td-label span { color: var(--gris); font-size: 8.5pt; line-height: 1.5; display: block; }
+
+    .col-std { text-align: right; color: #aaa; font-size: 9.5pt; white-space: nowrap; }
+    .col-remise { text-align: right; color: var(--rouge); font-size: 9pt; white-space: nowrap; font-weight: 500; }
+    .col-final { text-align: right; font-family: 'Cormorant Garamond', serif; font-size: 14pt; font-weight: 700; white-space: nowrap; }
+
+    .row-subtotal td {
+      background: #f5f3f0 !important;
+      padding: 11px 14px;
+      border-top: 2px solid var(--gris-clair);
+      font-size: 8.5pt;
+      font-weight: 500;
+      color: var(--gris);
+    }
+    .row-subtotal .col-std {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15pt; font-weight: 700;
+      text-decoration: line-through;
+      color: #bbb;
+    }
+
+    .row-remise td {
+      background: var(--rouge-pale) !important;
+      padding: 10px 14px; border: none;
+      font-size: 8.5pt; font-weight: 500;
+    }
+    .row-remise .col-remise {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15pt; font-weight: 700;
+    }
+
+    .row-total td {
+      background: var(--noir) !important;
+      color: #fff; padding: 14px; border: none;
+      font-size: 10pt; font-weight: 600;
+    }
+    .row-total .col-final { color: var(--or); font-size: 22pt; }
+
+    /* Geste box */
+    .geste-box {
+      background: var(--or-pale);
+      border-left: 3px solid var(--or);
+      padding: 11px 16px;
+      font-size: 8.5pt; color: #7a6540; line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .geste-box strong { color: var(--noir); }
+
+    /* Spacer between projects */
+    .proj-spacer { height: 8px; }
+
+    /* Récap table */
+    .recap { width: 100%; border-collapse: collapse; margin: 16px 0 20px; }
+    .recap thead th {
+      padding: 9px 14px; font-size: 7.5pt; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris);
+      background: #f0ede8; text-align: left;
+    }
+    .recap thead th.right { text-align: right; }
+    .recap tbody tr { border-bottom: 1px solid var(--gris-clair); }
+    .recap tbody td { padding: 11px 14px; font-size: 9.5pt; }
+    .recap tbody td.right { text-align: right; }
+    .recap .td-std { text-align: right; color: #bbb; text-decoration: line-through; font-size: 10pt; }
+    .recap .td-remise { text-align: right; color: var(--rouge); font-weight: 500; }
+    .recap .td-net { text-align: right; font-family: 'Cormorant Garamond', serif; font-size: 16pt; font-weight: 700; }
+    .recap .row-recap-total { background: var(--noir) !important; border: none; }
+    .recap .row-recap-total td { color: #fff; font-weight: 600; padding: 14px; }
+    .recap .row-recap-total .td-std { color: #555; text-decoration: line-through; }
+    .recap .row-recap-total .td-remise { color: var(--rouge); font-weight: 700; }
+    .recap .row-recap-total .td-net { color: var(--or); font-size: 22pt; }
+
+    /* Note */
+    .note { background: var(--or-pale); border-left: 3px solid var(--or); padding: 12px 16px; font-size: 8.5pt; color: #7a6a4f; line-height: 1.8; margin-bottom: 24px; }
+    .note strong { color: var(--noir); }
+
+    /* Conditions */
+    .conditions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .cond { border: 1px solid var(--gris-clair); padding: 14px 16px; }
+    .cond h4 { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--or); margin-bottom: 8px; }
+    .cond ul { list-style: none; padding: 0; }
+    .cond li { font-size: 8.5pt; color: var(--gris); padding: 2px 0 2px 12px; position: relative; line-height: 1.6; }
+    .cond li::before { content: '·'; position: absolute; left: 0; color: var(--or); font-weight: 700; }
+
+    /* Signature */
+    .sig-block { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 28px; }
+    .sig-side { border-top: 2px solid var(--noir); padding-top: 12px; }
+    .sig-label { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gris); margin-bottom: 4px; }
+    .sig-name { font-family: 'Cormorant Garamond', serif; font-size: 14pt; font-weight: 600; }
+    .sig-role { font-size: 8.5pt; color: var(--gris); }
+    .sig-line { border-bottom: 1px solid var(--gris-clair); margin: 52px 0 6px; }
+    .sig-mention { font-size: 7.5pt; color: #bbb; font-style: italic; }
+
+    .eyebrow { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--or); margin-bottom: 6px; }
+    .h1 { font-family: 'Cormorant Garamond', serif; font-size: 24pt; font-weight: 600; margin-bottom: 16px; }
+    .rule { width: 36px; height: 2px; background: var(--or); margin-bottom: 22px; }
+
+    .footer-brand { text-align: center; margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--gris-clair); font-family: 'Cormorant Garamond', serif; color: var(--or); font-size: 12pt; letter-spacing: 0.2em; }
+    .footer-ref { text-align: center; font-size: 8pt; color: #bbb; margin-top: 4px; }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== PAGE 1 — COUVERTURE ========== -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-brand">Expert Boucles — Yannick</div>
+    <div class="cover-ref">Réf. N° 2026-EB-004<br/>Émis le 9 août 2026</div>
+  </div>
+  <div class="cover-center">
+    <div class="cover-eyebrow">Proposition commerciale</div>
+    <div class="cover-title">Devis</div>
+    <div class="cover-sub">Expert Boucles & La Fabrica</div>
+    <div class="cover-rule"></div>
+    <div class="cover-meta">
+      <strong>Date :</strong> 9 août 2026<br/>
+      <strong>Validité :</strong> 8 septembre 2026<br/>
+      <strong>Projets :</strong> Site Expert Boucles (livré) + Site La Fabrica (à créer)
+    </div>
+  </div>
+  <div class="cover-footer">
+    <div>
+      <span>Prestataire</span><br/>
+      <strong>Julien Muret</strong><br/>
+      <span>Développeur Web Freelance</span><br/>
+      <span>contact@julienmuret.dev</span>
+    </div>
+    <div style="text-align:right">
+      <span>Client</span><br/>
+      <strong>Yannick</strong><br/>
+      <span>Expert Boucles — Paris 75009</span><br/>
+      <span>contact@expert-boucles.com · 07 81 31 30 94</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== PAGE 2 — LES DEUX PROJETS ========== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Réf. N° 2026-EB-004 · 9 août 2026</div>
+  </div>
+
+  <div class="parties">
+    <div class="partie">
+      <div class="partie-label">Prestataire</div>
+      <h3>Julien Muret</h3>
+      <p>Développeur Web Freelance<br/>SIRET : xxx xxx xxx xxxxx<br/>contact@julienmuret.dev</p>
+    </div>
+    <div class="partie">
+      <div class="partie-label">Client</div>
+      <h3>Yannick</h3>
+      <p>Expert Boucles — Coiffeur spécialisé<br/>Paris 9e, 75009<br/>contact@expert-boucles.com · 07 81 31 30 94</p>
+    </div>
+  </div>
+
+  <!-- ===== PROJET 1 ===== -->
+  <div class="proj-banner">
+    <div class="proj-num">01</div>
+    <div class="proj-info">
+      <h2>Site Expert Boucles</h2>
+      <p>Site vitrine complet — Livré et en ligne · Mai – Août 2026</p>
+    </div>
+  </div>
+
+  <table class="breakdown">
+    <thead>
+      <tr>
+        <th style="width:48%">Ce qui a été fait</th>
+        <th style="width:24%">En clair</th>
+        <th class="right" style="width:10%">Prix normal</th>
+        <th class="right" style="width:8%">Remise</th>
+        <th class="right" style="width:10%">Net HT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">
+          <strong>Design sur mesure</strong>
+          <span>Couleurs, polices, style général du site — une identité visuelle unique, cohérente avec l'image du salon</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Charte graphique complète</td>
+        <td class="col-std">850 €</td>
+        <td class="col-remise">−200 €</td>
+        <td class="col-final">650 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Création des pages du site</strong>
+          <span>Toutes les pages : Accueil, Prestations, À Propos, Réalisations, Contact, Réservation + pages légales</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">10 pages + 3 pages légales</td>
+        <td class="col-std">1 100 €</td>
+        <td class="col-remise">−250 €</td>
+        <td class="col-final">850 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Fiches détaillées de chaque prestation</strong>
+          <span>Une page par soin avec prix, durée, descriptif et bouton de réservation — 17 prestations au total</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">17 pages dynamiques</td>
+        <td class="col-std">550 €</td>
+        <td class="col-remise">−150 €</td>
+        <td class="col-final">400 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Connexion à vos outils en ligne</strong>
+          <span>Affichage automatique des avis Google, intégration de l'agenda Acuity pour les réservations en ligne</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Google Avis + Acuity Booking</td>
+        <td class="col-std">500 €</td>
+        <td class="col-remise">−100 €</td>
+        <td class="col-final">400 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Mise en ligne &amp; référencement de base</strong>
+          <span>Publication du site sur Internet, optimisation pour que Google puisse trouver et afficher votre salon</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Vercel + SEO + domaine</td>
+        <td class="col-std">200 €</td>
+        <td class="col-remise">−50 €</td>
+        <td class="col-final">150 €</td>
+      </tr>
+
+      <tr class="row-subtotal">
+        <td colspan="2" style="text-align:right;letter-spacing:0.08em;text-transform:uppercase;font-size:8pt">Prix du marché (agence web parisienne)</td>
+        <td class="col-std">3 200 €</td>
+        <td></td><td></td>
+      </tr>
+      <tr class="row-remise">
+        <td colspan="2" style="text-align:right;color:var(--rouge);font-size:8.5pt">Tarif préférentiel — connaissance</td>
+        <td></td>
+        <td class="col-remise">−700 €</td>
+        <td></td>
+      </tr>
+      <tr class="row-total">
+        <td colspan="2"><strong>TOTAL — Site Expert Boucles</strong></td>
+        <td></td><td></td>
+        <td class="col-final">2 500 €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="geste-box">
+    <strong>−700 € de remise appliquée.</strong> Une agence web à Paris facturerait ce type de site entre 3 000 € et 4 500 €. Vous bénéficiez d'un tarif préférentiel en tant que connaissance.
+  </div>
+
+  <div class="proj-spacer"></div>
+
+  <!-- ===== PROJET 2 ===== -->
+  <div class="proj-banner">
+    <div class="proj-num">02</div>
+    <div class="proj-info">
+      <h2>Site La Fabrica — Coworking</h2>
+      <p>Création du site + système de réservation en ligne — À réaliser</p>
+    </div>
+  </div>
+
+  <table class="breakdown">
+    <thead>
+      <tr>
+        <th style="width:48%">Ce qui sera fait</th>
+        <th style="width:24%">En clair</th>
+        <th class="right" style="width:10%">Prix normal</th>
+        <th class="right" style="width:8%">Remise</th>
+        <th class="right" style="width:10%">Net HT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">
+          <strong>Design sur mesure</strong>
+          <span>Création de l'identité visuelle de La Fabrica : couleurs, polices, ambiance générale du site</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Charte graphique</td>
+        <td class="col-std">450 €</td>
+        <td class="col-remise">−100 €</td>
+        <td class="col-final">350 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Pages de présentation de l'espace</strong>
+          <span>Accueil, présentation des bureaux, tarifs, galerie photos, formulaire de contact</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">4 à 5 pages</td>
+        <td class="col-std">500 €</td>
+        <td class="col-remise">−100 €</td>
+        <td class="col-final">400 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Système de réservation en ligne</strong>
+          <span>Les visiteurs peuvent réserver et payer directement sur le site — 3 options : à l'heure, à la demi-journée, au mois</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Calendrier + 3 formules</td>
+        <td class="col-std">800 €</td>
+        <td class="col-remise">−150 €</td>
+        <td class="col-final">650 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Paiement en ligne &amp; confirmations automatiques</strong>
+          <span>Règlement sécurisé par carte bancaire, email de confirmation envoyé automatiquement après chaque réservation</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Stripe + email auto</td>
+        <td class="col-std">200 €</td>
+        <td class="col-remise">−50 €</td>
+        <td class="col-final">150 €</td>
+      </tr>
+      <tr>
+        <td class="td-label">
+          <strong>Mise en ligne</strong>
+          <span>Publication du site sur Internet, tests sur mobile et ordinateur, documentation pour la prise en main</span>
+        </td>
+        <td style="font-size:8.5pt;color:var(--gris)">Vercel + tests</td>
+        <td class="col-std">100 €</td>
+        <td class="col-remise">−50 €</td>
+        <td class="col-final">50 €</td>
+      </tr>
+
+      <tr class="row-subtotal">
+        <td colspan="2" style="text-align:right;letter-spacing:0.08em;text-transform:uppercase;font-size:8pt">Prix du marché (agence web parisienne)</td>
+        <td class="col-std">2 050 €</td>
+        <td></td><td></td>
+      </tr>
+      <tr class="row-remise">
+        <td colspan="2" style="text-align:right;color:var(--rouge);font-size:8.5pt">Tarif préférentiel — connaissance + projets groupés</td>
+        <td></td>
+        <td class="col-remise">−550 €</td>
+        <td></td>
+      </tr>
+      <tr class="row-total">
+        <td colspan="2"><strong>TOTAL — Site La Fabrica</strong></td>
+        <td></td><td></td>
+        <td class="col-final">1 500 €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="geste-box">
+    <strong>−550 € de remise appliquée.</strong> Un site avec réservation en ligne et paiement par carte coûte habituellement entre 2 000 € et 3 500 €. Vous profitez d'un tarif réduit car les deux projets sont réalisés en même temps.
+  </div>
+</div>
+
+
+<!-- ========== PAGE 3 — RÉCAP & SIGNATURE ========== -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Réf. N° 2026-EB-004 · 9 août 2026</div>
+  </div>
+
+  <div class="eyebrow">Ce que vous payez</div>
+  <div class="h1">Récapitulatif</div>
+  <div class="rule"></div>
+
+  <table class="recap">
+    <thead>
+      <tr>
+        <th style="width:38%">Projet</th>
+        <th class="right" style="width:20%">Prix du marché</th>
+        <th class="right" style="width:17%">Votre remise</th>
+        <th class="right" style="width:25%">Vous payez</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Site Expert Boucles</strong><br/>
+          <span style="font-size:8.5pt;color:var(--gris)">Site vitrine + réservation + avis Google</span>
+        </td>
+        <td class="td-std">3 200 €</td>
+        <td class="td-remise">−700 €</td>
+        <td class="td-net">2 500 €</td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Site La Fabrica</strong><br/>
+          <span style="font-size:8.5pt;color:var(--gris)">Présentation + réservation 3 formules</span>
+        </td>
+        <td class="td-std">2 050 €</td>
+        <td class="td-remise">−550 €</td>
+        <td class="td-net">1 500 €</td>
+      </tr>
+      <tr class="row-recap-total">
+        <td><strong>TOTAL GÉNÉRAL</strong></td>
+        <td class="td-std">5 250 €</td>
+        <td class="td-remise">−1 250 €</td>
+        <td class="td-net">4 000 €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>Vous économisez 1 250 € HT</strong> (soit −24 %) grâce au tarif préférentiel entre connaissances et à la réalisation groupée des deux projets.<br/>
+    <strong>TVA :</strong> Montants indiqués hors taxes. TVA non applicable (micro-entreprise, art. 293B du CGI).<br/>
+    <strong>Validité du devis :</strong> 30 jours — jusqu'au <strong>8 septembre 2026</strong>.
+  </div>
+
+  <div class="eyebrow">Comment ça se passe</div>
+  <div class="conditions">
+    <div class="cond">
+      <h4>Paiement en 3 fois</h4>
+      <ul>
+        <li>40 % à la signature du devis</li>
+        <li>30 % quand le design est validé</li>
+        <li>30 % à la livraison du site</li>
+        <li>Virement bancaire</li>
+      </ul>
+    </div>
+    <div class="cond">
+      <h4>Ce que vous recevez</h4>
+      <ul>
+        <li>Le site mis en ligne</li>
+        <li>Le code source (votre propriété)</li>
+        <li>Une session de formation</li>
+        <li>Un guide de prise en main</li>
+      </ul>
+    </div>
+    <div class="cond">
+      <h4>Garanties</h4>
+      <ul>
+        <li>2 allers-retours de corrections inclus</li>
+        <li>Bugs corrigés gratuitement (30 j.)</li>
+        <li>Toute demande supplémentaire → devis</li>
+        <li>Délais selon validation de votre part</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="eyebrow" style="margin-top:16px">Signature</div>
+  <div class="h1" style="font-size:20pt;margin-bottom:8px">Bon pour accord</div>
+  <div class="rule"></div>
+
+  <div class="sig-block">
+    <div class="sig-side">
+      <div class="sig-label">Le prestataire</div>
+      <div class="sig-name">Julien Muret</div>
+      <div class="sig-role">Développeur Web Freelance</div>
+      <div class="sig-line"></div>
+      <div class="sig-mention">Signature + date</div>
+    </div>
+    <div class="sig-side">
+      <div class="sig-label">Le client</div>
+      <div class="sig-name">Yannick</div>
+      <div class="sig-role">Expert Boucles — Paris 75009</div>
+      <div class="sig-line"></div>
+      <div class="sig-mention">Mention "Bon pour accord" + signature + date</div>
+    </div>
+  </div>
+
+  <div class="footer-brand">EXPERT BOUCLES</div>
+  <div class="footer-ref">Réf. N° 2026-EB-004 · Valable jusqu'au 8 septembre 2026</div>
+</div>
+
+</body>
+</html>

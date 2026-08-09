@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devis — Expert Boucles & La Fabrica</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --noir: #0A0A0A;
+      --or: #C9A96E;
+      --or-light: #E8D5A8;
+      --blanc: #F5F5F0;
+      --gris: #6B6B6B;
+      --gris-clair: #E8E8E3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--noir);
+      font-size: 10pt;
+      line-height: 1.6;
+    }
+
+    /* ---- COVER PAGE ---- */
+    .cover {
+      width: 100%;
+      min-height: 100vh;
+      background: var(--noir);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 72px;
+      page-break-after: always;
+    }
+
+    .cover-logo {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--or);
+      font-size: 13pt;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .cover-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cover-label {
+      color: var(--or);
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .cover-title {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--blanc);
+      font-size: 44pt;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .cover-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--or);
+      font-size: 22pt;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .cover-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--or);
+      margin: 32px 0;
+    }
+
+    .cover-meta {
+      color: #888;
+      font-size: 9.5pt;
+      line-height: 2;
+    }
+
+    .cover-meta strong {
+      color: var(--blanc);
+      font-weight: 500;
+    }
+
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid #222;
+      padding-top: 24px;
+    }
+
+    .cover-footer-left {
+      color: #555;
+      font-size: 8.5pt;
+      line-height: 1.8;
+    }
+
+    .cover-footer-right {
+      color: var(--or);
+      font-size: 9pt;
+      text-align: right;
+    }
+
+    .cover-ref {
+      display: inline-block;
+      background: #161616;
+      border: 1px solid #333;
+      color: var(--or);
+      font-size: 8.5pt;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      margin-top: 16px;
+    }
+
+    /* ---- CONTENT PAGES ---- */
+    .page {
+      padding: 52px 72px;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    /* Section header */
+    .section-label {
+      color: var(--or);
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26pt;
+      font-weight: 600;
+      color: var(--noir);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .gold-line {
+      width: 40px;
+      height: 2px;
+      background: var(--or);
+      margin-bottom: 32px;
+    }
+
+    /* Intro box */
+    .intro-box {
+      background: var(--noir);
+      color: var(--blanc);
+      padding: 28px 36px;
+      margin-bottom: 36px;
+    }
+
+    .intro-box p {
+      font-size: 10pt;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .intro-box strong {
+      color: var(--or);
+    }
+
+    /* Parties */
+    .parties {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .partie-card {
+      border: 1px solid var(--gris-clair);
+      padding: 20px 24px;
+    }
+
+    .partie-card-label {
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 10px;
+    }
+
+    .partie-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .partie-card p {
+      font-size: 9pt;
+      color: var(--gris);
+      line-height: 1.7;
+    }
+
+    /* Module cards */
+    .module {
+      margin-bottom: 32px;
+      border-left: 3px solid var(--or);
+      padding-left: 24px;
+    }
+
+    .module-number {
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 6px;
+    }
+
+    .module-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18pt;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .module-desc {
+      font-size: 9.5pt;
+      color: var(--gris);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .module-includes {
+      margin-bottom: 14px;
+    }
+
+    .module-includes-title {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--noir);
+      margin-bottom: 8px;
+    }
+
+    .module-includes ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .module-includes li {
+      font-size: 9pt;
+      color: var(--gris);
+      padding: 3px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .module-includes li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--or);
+      font-size: 8pt;
+    }
+
+    .module-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--blanc);
+      padding: 12px 16px;
+      margin-top: 8px;
+    }
+
+    .module-price-label {
+      font-size: 8pt;
+      font-weight: 500;
+      color: var(--gris);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .module-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--noir);
+    }
+
+    .module-price-range {
+      font-size: 8pt;
+      color: var(--gris);
+      text-align: right;
+    }
+
+    .badge-tbc {
+      display: inline-block;
+      background: #f5f0e8;
+      border: 1px solid var(--or);
+      color: var(--or);
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .badge-livré {
+      display: inline-block;
+      background: #e8f5e8;
+      border: 1px solid #4CAF50;
+      color: #2e7d32;
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .notes-box {
+      background: #fdf8f0;
+      border: 1px solid var(--or-light);
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .notes-box p {
+      font-size: 8.5pt;
+      color: #7a6a4f;
+      line-height: 1.7;
+    }
+
+    .notes-box strong {
+      color: var(--noir);
+    }
+
+    /* Summary table */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+    }
+
+    .summary-table thead tr {
+      background: var(--noir);
+      color: var(--blanc);
+    }
+
+    .summary-table thead th {
+      padding: 12px 16px;
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .summary-table thead th:last-child {
+      text-align: right;
+    }
+
+    .summary-table tbody tr {
+      border-bottom: 1px solid var(--gris-clair);
+    }
+
+    .summary-table tbody tr:nth-child(even) {
+      background: var(--blanc);
+    }
+
+    .summary-table tbody td {
+      padding: 12px 16px;
+      font-size: 9.5pt;
+      vertical-align: top;
+    }
+
+    .summary-table tbody td:last-child {
+      text-align: right;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13pt;
+      font-weight: 600;
+    }
+
+    .summary-table .row-delivered td {
+      color: var(--gris);
+    }
+
+    .summary-table .row-tbc td {
+      color: var(--gris);
+      font-style: italic;
+    }
+
+    .summary-table .row-total {
+      background: var(--noir) !important;
+    }
+
+    .summary-table .row-total td {
+      color: var(--blanc);
+      padding: 16px;
+      font-weight: 600;
+    }
+
+    .summary-table .row-total td:last-child {
+      color: var(--or);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20pt;
+      text-align: right;
+    }
+
+    .summary-table .row-subtotal td {
+      background: #f0ede8;
+      font-weight: 500;
+    }
+
+    /* Conditions */
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .condition-card {
+      border: 1px solid var(--gris-clair);
+      padding: 18px 20px;
+    }
+
+    .condition-card h4 {
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 10px;
+    }
+
+    .condition-card p, .condition-card li {
+      font-size: 9pt;
+      color: var(--gris);
+      line-height: 1.7;
+    }
+
+    .condition-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .condition-card li {
+      padding: 2px 0 2px 14px;
+      position: relative;
+    }
+
+    .condition-card li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--or);
+      font-weight: 700;
+    }
+
+    /* Signature block */
+    .signature-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .signature-side {
+      border-top: 2px solid var(--noir);
+      padding-top: 16px;
+    }
+
+    .signature-side-label {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gris);
+      margin-bottom: 6px;
+    }
+
+    .signature-side-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-weight: 600;
+    }
+
+    .signature-side-role {
+      font-size: 8.5pt;
+      color: var(--gris);
+      margin-bottom: 48px;
+    }
+
+    .signature-line {
+      border-bottom: 1px solid var(--gris-clair);
+      margin-top: 60px;
+      margin-bottom: 6px;
+    }
+
+    .signature-mention {
+      font-size: 7.5pt;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    /* Page header for inner pages */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--gris-clair);
+      padding-bottom: 16px;
+      margin-bottom: 40px;
+    }
+
+    .page-header-brand {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--or);
+      font-size: 11pt;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+    }
+
+    .page-header-ref {
+      font-size: 8pt;
+      color: var(--gris);
+      text-align: right;
+    }
+
+    /* Project separator */
+    .project-separator {
+      background: var(--noir);
+      color: var(--blanc);
+      padding: 14px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .project-separator-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28pt;
+      font-weight: 600;
+      color: var(--or);
+      line-height: 1;
+    }
+
+    .project-separator-info h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      font-weight: 600;
+    }
+
+    .project-separator-info p {
+      font-size: 8.5pt;
+      color: #888;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .cover {
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================= COVER ============================= -->
+<div class="cover">
+  <div class="cover-logo">Expert Boucles — Yannick Coiffeur</div>
+
+  <div class="cover-center">
+    <div class="cover-label">Proposition commerciale</div>
+    <div class="cover-title">Devis<br/>Développement<br/>Web</div>
+    <div class="cover-subtitle">Site Expert Boucles & La Fabrica</div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <strong>Établi le :</strong> 9 août 2026<br/>
+      <strong>Valable jusqu'au :</strong> 8 septembre 2026<br/>
+      <strong>Projets :</strong> Expert Boucles (évolutions) + La Fabrica (création)
+    </div>
+    <div>
+      <div class="cover-ref">DEVIS N° 2026-EB-001</div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-footer-left">
+      Prestataire<br/>
+      <strong style="color:#fff">Julien Muret</strong><br/>
+      Développeur Web Freelance<br/>
+      contact@julienmuret.dev
+    </div>
+    <div class="cover-footer-right">
+      Client<br/>
+      <strong style="color:#fff">Yannick</strong><br/>
+      Expert Boucles — Paris 75009<br/>
+      contact@expert-boucles.com
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 2 — CONTEXTE ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-EB-001<br/>9 août 2026</div>
+  </div>
+
+  <div class="section-label">Présentation générale</div>
+  <div class="section-title">Contexte &amp; Périmètre</div>
+  <div class="gold-line"></div>
+
+  <div class="intro-box">
+    <p>
+      Ce devis fait suite à la phase de faisabilité menée en mai–août 2026, au cours de laquelle le site
+      <strong>Expert Boucles</strong> a été conçu et développé dans son intégralité.
+      Le présent document couvre à la fois <strong>la valorisation de l'existant livré</strong> et les
+      <strong>nouvelles fonctionnalités</strong> discutées lors de la réunion du 9 août 2026,
+      ainsi qu'un projet distinct : <strong>La Fabrica</strong>.
+    </p>
+  </div>
+
+  <div class="parties">
+    <div class="partie-card">
+      <div class="partie-card-label">Prestataire</div>
+      <h3>Julien Muret</h3>
+      <p>
+        Développeur Web Freelance<br/>
+        Spécialiste Next.js / TypeScript<br/>
+        contact@julienmuret.dev<br/>
+        SIRET : xxx xxx xxx xxxxx
+      </p>
+    </div>
+    <div class="partie-card">
+      <div class="partie-card-label">Client</div>
+      <h3>Yannick</h3>
+      <p>
+        Expert Boucles — Coiffeur spécialisé<br/>
+        Paris 9e arrondissement, 75009<br/>
+        contact@expert-boucles.com<br/>
+        Tél : 07 81 31 30 94
+      </p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:32px">Projets couverts</div>
+  <div class="section-title" style="font-size:18pt">Deux projets distincts</div>
+  <div class="gold-line"></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div class="condition-card">
+      <h4>Projet 1 — Expert Boucles</h4>
+      <ul>
+        <li>Site vitrine existant (livré)</li>
+        <li>Module Formation en ligne (B2B)</li>
+        <li>Module Diagnostic Cheveux (B2C)</li>
+        <li>Module Mariage (à confirmer)</li>
+        <li>Référencement IA / AEO</li>
+      </ul>
+    </div>
+    <div class="condition-card">
+      <h4>Projet 2 — La Fabrica</h4>
+      <ul>
+        <li>Création site coworking</li>
+        <li>Pages de présentation</li>
+        <li>Module réservation : heure / demi-journée / mois</li>
+        <li>Devis séparé (référence 2026-LF-001)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 3 — PHASE 0 LIVRÉE ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-EB-001<br/>9 août 2026</div>
+  </div>
+
+  <div class="project-separator">
+    <div class="project-separator-number">0</div>
+    <div class="project-separator-info">
+      <h2>Phase livrée — Site Expert Boucles</h2>
+      <p>Développé de mai à août 2026 — Prêt pour mise en production</p>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-number">Phase 0 · Livrable existant</div>
+    <div class="module-title">Site vitrine complet <span class="badge-livré">Livré</span></div>
+    <div class="module-desc">
+      Conception et développement complet du site Expert Boucles, incluant l'architecture technique,
+      le design système, toutes les pages publiques et les intégrations tierces.
+    </div>
+
+    <div class="module-includes">
+      <div class="module-includes-title">Ce qui a été réalisé</div>
+      <ul>
+        <li>Design système complet — Palette noir/or/blanc, typographie Cormorant Garamond + Inter</li>
+        <li>10 pages : Accueil, Prestations, Détails service (×17), À Propos, Réalisations, Contact, Réservation, CGV, Mentions légales, Remboursement</li>
+        <li>Hero fullscreen scroll effet YSL — Swiper.js, parallax, navigation clavier + molette</li>
+        <li>17 fiches prestations — Pages statiques dynamiques avec prix, durée, includes, booking</li>
+        <li>Avis Google dynamiques — API Google Places, carousel auto-play, cache 24h</li>
+        <li>Intégration Acuity Scheduling — Widget booking sur chaque prestation + page dédiée</li>
+        <li>Architecture sans base de données — Déploiement Vercel simplifié, coûts réduits</li>
+        <li>SEO structurel — Métadonnées, OpenGraph, pages statiques pré-générées (performance max)</li>
+        <li>Responsive mobile-first — Validé mobile / tablet / desktop</li>
+        <li>Stack moderne : Next.js 14, TypeScript strict, Tailwind CSS 3</li>
+      </ul>
+    </div>
+
+    <div class="module-price-row">
+      <div>
+        <div class="module-price-label">Montant — Phase 0</div>
+        <div class="module-price-range">Développement + design + intégrations</div>
+      </div>
+      <div style="text-align:right">
+        <div class="module-price">À définir ensemble</div>
+        <div class="module-price-range">Selon accord initial</div>
+      </div>
+    </div>
+    <div class="notes-box">
+      <p><strong>Note :</strong> Le montant de la phase 0 (site livré) est à valider conjointement selon les termes convenus lors du démarrage du projet. Ce devis se concentre principalement sur les nouvelles fonctionnalités et projets identifiés le 9 août 2026.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 4 — MODULES EXPERT BOUCLES ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-EB-001<br/>9 août 2026</div>
+  </div>
+
+  <div class="project-separator">
+    <div class="project-separator-number">1</div>
+    <div class="project-separator-info">
+      <h2>Projet 1 — Expert Boucles · Nouvelles fonctionnalités</h2>
+      <p>Évolutions du site existant — Modules complémentaires</p>
+    </div>
+  </div>
+
+  <!-- MODULE 1.1 -->
+  <div class="module">
+    <div class="module-number">Module 1.1 · B2B — Coiffeurs professionnels</div>
+    <div class="module-title">Formation en ligne</div>
+    <div class="module-desc">
+      Plateforme de formation destinée aux coiffeurs professionnels souhaitant se spécialiser dans
+      les techniques de coupe et coiffage cheveux bouclés. Accès en ligne, structuré en modules vidéo progressifs.
+    </div>
+
+    <div class="module-includes">
+      <div class="module-includes-title">Périmètre inclus</div>
+      <ul>
+        <li>Espace membre sécurisé (authentification email/mot de passe)</li>
+        <li>Hébergement vidéo via Vimeo Pro (coût Vimeo à la charge du client)</li>
+        <li>Découpage en modules / chapitres avec progression</li>
+        <li>Suivi de progression par chapitre (lu / en cours / terminé)</li>
+        <li>Paiement en ligne via Stripe (achat unique ou abonnement)</li>
+        <li>Page de vente dédiée formation</li>
+        <li>Emails automatiques post-achat (accès + confirmation)</li>
+        <li>Interface admin légère pour ajouter/modifier les modules</li>
+      </ul>
+    </div>
+
+    <div class="module-price-row">
+      <div>
+        <div class="module-price-label">Estimation</div>
+        <div class="module-price-range">Selon nombre de modules et niveau de personnalisation</div>
+      </div>
+      <div style="text-align:right">
+        <div class="module-price">1 500 € – 3 000 €</div>
+        <div class="module-price-range">HT — délai : 3 à 5 semaines</div>
+      </div>
+    </div>
+    <div class="notes-box">
+      <p><strong>Points à clarifier :</strong> Nombre de modules/vidéos prévus · Achat unique ou abonnement mensuel · Besoin d'un back-office d'administration des contenus · Niveau de personnalisation graphique de l'espace membre.</p>
+    </div>
+  </div>
+
+  <!-- MODULE 1.2 -->
+  <div class="module">
+    <div class="module-number">Module 1.2 · B2C — Clients du salon</div>
+    <div class="module-title">Diagnostic Cheveux Interactif</div>
+    <div class="module-desc">
+      Outil de diagnostic personnalisé permettant aux clients de recevoir une recommandation de prestation
+      adaptée à leur profil capillaire, directement sur le site. Lien direct vers la réservation Acuity.
+    </div>
+
+    <div class="module-includes">
+      <div class="module-includes-title">Périmètre inclus</div>
+      <ul>
+        <li>Questionnaire multi-étapes animé (5 à 8 questions)</li>
+        <li>Critères : longueur des cheveux, type de boucle, état du cuir chevelu, objectif</li>
+        <li>Algorithme de recommandation → prestation suggérée parmi les 17 services</li>
+        <li>Page de résultat avec CTA "Réserver cette prestation" (lien Acuity)</li>
+        <li>Option : capture d'email pour recevoir le résultat (lead generation)</li>
+        <li>Design 100% cohérent avec la charte graphique existante</li>
+      </ul>
+    </div>
+
+    <div class="module-price-row">
+      <div>
+        <div class="module-price-label">Estimation</div>
+        <div class="module-price-range">Selon nombre de questions et logique de recommandation</div>
+      </div>
+      <div style="text-align:right">
+        <div class="module-price">600 € – 900 €</div>
+        <div class="module-price-range">HT — délai : 1 à 2 semaines</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 5 — MODULES SUITE ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-EB-001<br/>9 août 2026</div>
+  </div>
+
+  <!-- MODULE 1.3 -->
+  <div class="module">
+    <div class="module-number">Module 1.3 · B2B/B2C · En attente de confirmation</div>
+    <div class="module-title">Module Mariage <span class="badge-tbc">À confirmer</span></div>
+    <div class="module-desc">
+      Offre dédiée aux prestations mariage : coiffure mariée, cortège, essais.
+      Inclut une page de présentation et un système de demande de devis personnalisé.
+    </div>
+
+    <div class="module-includes">
+      <div class="module-includes-title">Périmètre estimé</div>
+      <ul>
+        <li>Page dédiée "Mariage" avec galerie photos et présentation des offres</li>
+        <li>Formulaire de demande de devis (date, nombre de personnes, type de prestation)</li>
+        <li>Envoi automatique par email à Yannick (Resend)</li>
+        <li>Option : système de devis chiffré en ligne (formulaire avancé)</li>
+      </ul>
+    </div>
+
+    <div class="module-price-row">
+      <div>
+        <div class="module-price-label">Estimation</div>
+        <div class="module-price-range">Selon complexité du système de devis</div>
+      </div>
+      <div style="text-align:right">
+        <div class="module-price">400 € – 800 €</div>
+        <div class="module-price-range">HT — délai : 1 à 2 semaines</div>
+      </div>
+    </div>
+    <div class="notes-box">
+      <p><strong>À confirmer avec Yannick :</strong> Simple formulaire de contact mariage, ou devis structuré en ligne avec tarification automatique ? Cette décision impacte directement le budget et le délai.</p>
+    </div>
+  </div>
+
+  <!-- MODULE 1.4 -->
+  <div class="module">
+    <div class="module-number">Module 1.4 · SEO · Stratégie longue durée</div>
+    <div class="module-title">Référencement IA (AEO)</div>
+    <div class="module-desc">
+      Optimisation de la visibilité du site sur les nouveaux moteurs de recherche IA :
+      ChatGPT, Perplexity, Gemini, Microsoft Copilot. Stratégie AEO (Answer Engine Optimization)
+      complémentaire au SEO traditionnel.
+    </div>
+
+    <div class="module-includes">
+      <div class="module-includes-title">Périmètre inclus</div>
+      <ul>
+        <li>Audit de visibilité actuelle sur les moteurs IA (test de positionnement)</li>
+        <li>Implémentation Schema markup JSON-LD : LocalBusiness, Service, FAQ, Review</li>
+        <li>Structuration des contenus en format "réponse directe" pour les IA</li>
+        <li>Création / optimisation des sections FAQ sur les pages clés</li>
+        <li>Rédaction de 3 à 5 contenus AEO-optimisés (expertise boucles, méthodes)</li>
+        <li>Rapport de recommandations et suivi sur 30 jours</li>
+      </ul>
+    </div>
+
+    <div class="module-price-row">
+      <div>
+        <div class="module-price-label">Estimation</div>
+        <div class="module-price-range">Audit + implémentation technique + rédaction contenu</div>
+      </div>
+      <div style="text-align:right">
+        <div class="module-price">500 € – 1 200 €</div>
+        <div class="module-price-range">HT — délai : 2 à 3 semaines</div>
+      </div>
+    </div>
+    <div class="notes-box">
+      <p><strong>Option récurrente :</strong> Suivi mensuel AEO disponible en forfait (veille, ajustements, nouveaux contenus) — à chiffrer séparément selon les besoins.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 6 — LA FABRICA ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">La Fabrica × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-LF-001<br/>9 août 2026</div>
+  </div>
+
+  <div class="project-separator">
+    <div class="project-separator-number">2</div>
+    <div class="project-separator-info">
+      <h2>Projet 2 — La Fabrica · Site Coworking</h2>
+      <p>Projet distinct — Création de site + module de réservation</p>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-number">La Fabrica · Devis N° 2026-LF-001</div>
+    <div class="module-title">Site de présentation + Réservation</div>
+    <div class="module-desc">
+      Création d'un site web pour l'espace de coworking "La Fabrica".
+      Le site présente l'espace et propose un système de réservation en ligne avec 3 formules :
+      à l'heure, à la demi-journée, et au mois.
+    </div>
+
+    <div class="module-includes">
+      <div class="module-includes-title">Périmètre inclus</div>
+      <ul>
+        <li>Design sur mesure (charte graphique La Fabrica à définir)</li>
+        <li>Pages de présentation : Accueil, L'espace, Tarifs, Contact</li>
+        <li>Page Galerie photos de l'espace</li>
+        <li>Système de réservation en ligne — 3 formules :</li>
+        <li style="padding-left:30px">→ À l'heure : calendrier avec créneaux disponibles</li>
+        <li style="padding-left:30px">→ À la demi-journée : matin / après-midi</li>
+        <li style="padding-left:30px">→ Au mois : abonnement avec paiement récurrent Stripe</li>
+        <li>Paiement en ligne sécurisé via Stripe</li>
+        <li>Confirmation de réservation par email (automatique)</li>
+        <li>Interface admin : visualisation et gestion des réservations</li>
+        <li>Responsive mobile / tablet / desktop</li>
+        <li>Déploiement sur Vercel</li>
+      </ul>
+    </div>
+
+    <div class="module-price-row">
+      <div>
+        <div class="module-price-label">Estimation</div>
+        <div class="module-price-range">Selon complexité du module booking et l'existant</div>
+      </div>
+      <div style="text-align:right">
+        <div class="module-price">1 200 € – 2 500 €</div>
+        <div class="module-price-range">HT — délai : 3 à 5 semaines</div>
+      </div>
+    </div>
+
+    <div class="notes-box">
+      <p>
+        <strong>Note sur la solution booking :</strong> Trois approches possibles selon le budget :<br/>
+        <strong>Option A (1 200€)</strong> — Intégration d'un outil tiers (Cal.com, Tidycal, Calendly) = rapide, fonctionnel, moins personnalisable.<br/>
+        <strong>Option B (1 800€)</strong> — Module custom sur-mesure avec Stripe + calendrier = entièrement aux couleurs de La Fabrica, gestion complète.<br/>
+        <strong>Option C (2 500€)</strong> — Module complet avec back-office admin, gestion des abonnements mensuels, tableau de bord.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 7 — RÉCAPITULATIF ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-EB-001<br/>9 août 2026</div>
+  </div>
+
+  <div class="section-label">Vue d'ensemble</div>
+  <div class="section-title">Récapitulatif Financier</div>
+  <div class="gold-line"></div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th style="width:5%">#</th>
+        <th style="width:35%">Module / Prestation</th>
+        <th style="width:25%">Périmètre</th>
+        <th style="width:15%">Délai estimé</th>
+        <th style="width:20%">Montant HT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-delivered">
+        <td>0</td>
+        <td><strong>Site Expert Boucles</strong><br/><small>Phase livrée</small></td>
+        <td>10 pages + design system + intégrations</td>
+        <td>Livré ✓</td>
+        <td>À valider</td>
+      </tr>
+
+      <tr>
+        <td>1.1</td>
+        <td><strong>Formation en ligne</strong><br/><small>B2B — Coiffeurs</small></td>
+        <td>Espace membre, vidéos, Stripe, admin</td>
+        <td>3 – 5 semaines</td>
+        <td>1 500 – 3 000 €</td>
+      </tr>
+
+      <tr>
+        <td>1.2</td>
+        <td><strong>Diagnostic Cheveux</strong><br/><small>B2C — Clients</small></td>
+        <td>Questionnaire interactif + recommandation</td>
+        <td>1 – 2 semaines</td>
+        <td>600 – 900 €</td>
+      </tr>
+
+      <tr class="row-tbc">
+        <td>1.3</td>
+        <td><strong>Module Mariage</strong><br/><small>À confirmer</small></td>
+        <td>Page dédiée + formulaire devis</td>
+        <td>1 – 2 semaines</td>
+        <td>400 – 800 €</td>
+      </tr>
+
+      <tr>
+        <td>1.4</td>
+        <td><strong>Référencement IA</strong><br/><small>AEO Strategy</small></td>
+        <td>Audit + Schema markup + contenus</td>
+        <td>2 – 3 semaines</td>
+        <td>500 – 1 200 €</td>
+      </tr>
+
+      <tr class="row-subtotal">
+        <td colspan="4" style="text-align:right;font-size:9pt;letter-spacing:0.1em;text-transform:uppercase">Total nouvelles fonctionnalités Expert Boucles (hors mariage)</td>
+        <td>2 600 – 5 100 €</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td><strong>La Fabrica</strong><br/><small>Site coworking</small></td>
+        <td>Site + réservation 3 formules + Stripe</td>
+        <td>3 – 5 semaines</td>
+        <td>1 200 – 2 500 €</td>
+      </tr>
+
+      <tr class="row-total">
+        <td colspan="4"><strong>TOTAL GÉNÉRAL</strong><br/><small style="color:#888;font-weight:400">Tous projets confondus (hors phase 0 + hors module mariage)</small></td>
+        <td>3 800 – 7 600 €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notes-box" style="margin-bottom:24px">
+    <p>
+      <strong>TVA :</strong> Montants indiqués hors taxes (HT). TVA non applicable si auto-entrepreneur (article 293B du CGI), sinon TVA à 20% à ajouter.<br/>
+      <strong>Fourchettes :</strong> Les montants sont des estimations. Un chiffrage précis sera établi après validation du périmètre exact de chaque module lors d'un échange complémentaire.
+    </p>
+  </div>
+
+  <div class="section-label">Planning prévisionnel</div>
+  <div class="conditions-grid">
+    <div class="condition-card">
+      <h4>Court terme (1–3 semaines)</h4>
+      <ul>
+        <li>Module Diagnostic Cheveux (1.2)</li>
+        <li>Module Mariage si confirmé (1.3)</li>
+        <li>Démarrage SEO IA (1.4)</li>
+      </ul>
+    </div>
+    <div class="condition-card">
+      <h4>Moyen terme (3–8 semaines)</h4>
+      <ul>
+        <li>Module Formation en ligne (1.1)</li>
+        <li>Site La Fabrica (2)</li>
+        <li>Finalisation SEO IA + suivi</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= PAGE 8 — CONDITIONS & SIGNATURE ============================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-brand">Expert Boucles × Julien Muret</div>
+    <div class="page-header-ref">Devis N° 2026-EB-001<br/>9 août 2026</div>
+  </div>
+
+  <div class="section-label">Modalités</div>
+  <div class="section-title">Conditions &amp; Paiement</div>
+  <div class="gold-line"></div>
+
+  <div class="conditions-grid">
+    <div class="condition-card">
+      <h4>Modalités de paiement</h4>
+      <ul>
+        <li>40% à la signature du devis (acompte)</li>
+        <li>30% à mi-parcours (validation des maquettes)</li>
+        <li>30% à la livraison finale</li>
+        <li>Virement bancaire ou PayPal</li>
+      </ul>
+    </div>
+    <div class="condition-card">
+      <h4>Délais et révisions</h4>
+      <ul>
+        <li>Délais indicatifs à partir de la validation du devis</li>
+        <li>2 cycles de retours inclus par module</li>
+        <li>Demandes hors périmètre : avenant tarifaire</li>
+        <li>Délais affectés par les retours clients</li>
+      </ul>
+    </div>
+    <div class="condition-card">
+      <h4>Livrables</h4>
+      <ul>
+        <li>Code source complet (dépôt GitHub privé)</li>
+        <li>Déploiement sur Vercel</li>
+        <li>Documentation technique</li>
+        <li>Formation à l'utilisation (30 min par module)</li>
+      </ul>
+    </div>
+    <div class="condition-card">
+      <h4>Maintenance post-livraison</h4>
+      <ul>
+        <li>Garantie bugs : 30 jours après livraison</li>
+        <li>Forfait maintenance mensuel disponible</li>
+        <li>Mises à jour de sécurité incluses (1 an)</li>
+        <li>Support email sous 48h ouvrées</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="notes-box" style="margin-bottom:40px">
+    <p>
+      <strong>Propriété intellectuelle :</strong> À la réception du solde final, le client devient propriétaire du code source produit dans le cadre de ce devis. Les outils et librairies open-source restent soumis à leurs licences respectives.<br/><br/>
+      <strong>Confidentialité :</strong> Le prestataire s'engage à ne pas divulguer les informations confidentielles du client (données commerciales, stratégie, contenus) à des tiers.<br/><br/>
+      <strong>Validité du devis :</strong> Ce devis est valable 30 jours à compter de sa date d'émission, soit jusqu'au <strong>8 septembre 2026</strong>.
+    </p>
+  </div>
+
+  <div class="section-label">Acceptation</div>
+  <div class="section-title" style="font-size:18pt">Bon pour accord</div>
+  <div class="gold-line"></div>
+
+  <div class="signature-block">
+    <div class="signature-side">
+      <div class="signature-side-label">Le prestataire</div>
+      <div class="signature-side-name">Julien Muret</div>
+      <div class="signature-side-role">Développeur Web Freelance</div>
+      <div class="signature-line"></div>
+      <div class="signature-mention">Signature + date</div>
+    </div>
+    <div class="signature-side">
+      <div class="signature-side-label">Le client</div>
+      <div class="signature-side-name">Yannick</div>
+      <div class="signature-side-role">Expert Boucles — Paris 75009</div>
+      <div class="signature-line"></div>
+      <div class="signature-mention">Signature précédée de la mention "Bon pour accord" + date</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--gris-clair)">
+    <div style="font-family:'Cormorant Garamond',serif;color:var(--or);font-size:14pt;letter-spacing:0.2em">EXPERT BOUCLES</div>
+    <div style="font-size:8pt;color:#aaa;margin-top:4px">Devis N° 2026-EB-001 · Valable jusqu'au 8 septembre 2026</div>
+  </div>
+</div>
+
+</body>
+</html>
